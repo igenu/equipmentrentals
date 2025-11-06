@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight, Search, FileText } from "lucide-react";
-
+import thumb from "../../assets/video-thumb.jpg";
 const tabs = ["Cranes", "Earthmoving", "Road", "Concreting", "Plant", "Miscellaneous"];
 
 const equipmentData = {
@@ -18,7 +18,7 @@ const equipmentData = {
       "Tower Cranes",
       "Truck Mounted Cranes",
     ],
-    image: "/src/assets/video-thumb.jpg"
+    image: "thumb"
   },
   Earthmoving: {
     title: "Powerful Earthmoving Equipment",
@@ -32,7 +32,7 @@ const equipmentData = {
       "Motor Graders",
       "Skid Steer Loaders",
     ],
-    image: "/src/assets/video-thumb.jpg"
+    image: "thumb"
   },
   Road: {
     title: "Advanced Road Construction Machinery",
@@ -45,7 +45,7 @@ const equipmentData = {
       "Compactors",
       "Bitumen Sprayers",
     ],
-    image: "/src/assets/video-thumb.jpg"
+    image: "thumb"
   },
   Concreting: {
     title: "Complete Concreting Solutions",
@@ -58,7 +58,7 @@ const equipmentData = {
       "Concrete Pumps",
       "Vibrators",
     ],
-    image: "/src/assets/video-thumb.jpg"
+    image: "thumb"
   },
   Plant: {
     title: "Industrial Plant Equipment",
@@ -70,7 +70,7 @@ const equipmentData = {
       "Batching Plants",
       "Asphalt Plants",
     ],
-    image: "/src/assets/video-thumb.jpg"
+    image: "thumb"
   },
   Miscellaneous: {
     title: "Essential Construction Accessories",
@@ -83,7 +83,7 @@ const equipmentData = {
       "Material Hoists",
       "Welding Machines",
     ],
-    image: "/src/assets/video-thumb.jpg"
+    image: "thumb"
   },
 };
 
