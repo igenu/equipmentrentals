@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Flame, CheckCircle, Star, Tag, ArrowRight, Heart, Eye, TrendingUp } from "lucide-react";
-import thumb from "../../assets/images/video-thumb.jpg";
+import thumb from "../../assets/video-thumb.jpg";
 
 const data = {
   all: [
