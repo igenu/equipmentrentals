@@ -110,10 +110,16 @@ export default function Header() {
                         <Menu size={28} />
                     </button>
                 </div>
-
+                {/* Overlay */}
+                {menuOpen && (
+                    <div
+                        className="fixed inset-0 bg-black/70 bg-opacity-40 z-9"
+                        onClick={() => setMenuOpen(false)}
+                    ></div>
+                )}
                 {/* Off-Canvas Menu */}
                 <div
-                    className={`fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform transition-transform ${menuOpen ? "translate-x-0" : "translate-x-full"
+                    className={`z-99 fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform transition-transform ${menuOpen ? "translate-x-0" : "translate-x-full"
                         }`}
                 >
                     <div className="flex items-center justify-between px-4 py-3 border-b">
@@ -135,13 +141,7 @@ export default function Header() {
                     </nav>
                 </div>
 
-                {/* Overlay */}
-                {menuOpen && (
-                    <div
-                        className="fixed inset-0 bg-black bg-opacity-40"
-                        onClick={() => setMenuOpen(false)}
-                    ></div>
-                )}
+                
 
             </div>
         </header>
