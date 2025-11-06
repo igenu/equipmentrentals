@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Flame, CheckCircle, Star, Tag, ArrowRight, Heart, Eye, TrendingUp } from "lucide-react";
+import thumb from "../../assets/images/video-thumb.jpg";
 
 const data = {
   all: [
@@ -7,7 +8,7 @@ const data = {
       id: 1,
       title: "Bauer BG28 Piling Rig",
       desc: "Bauer BG28 Piling Rig",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Hot deal",
       views: "1.2K",
       price: "₹45L"
@@ -16,7 +17,7 @@ const data = {
       id: 2,
       title: "Excavator",
       desc: "TATA EX-200 SUPER is available for sale!",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Verified",
       views: "890",
       price: "₹32L"
@@ -25,7 +26,7 @@ const data = {
       id: 6,
       title: "Excavator",
       desc: "TATA EX-200 SUPER is available for sale!",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Verified",
       views: "756",
       price: "₹28L"
@@ -34,7 +35,7 @@ const data = {
       id: 7,
       title: "Excavator",
       desc: "TATA EX-200 SUPER is available for sale!",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Verified",
       views: "756",
       price: "₹28L"
@@ -45,7 +46,7 @@ const data = {
       id: 3,
       title: "CASE Dozer",
       desc: "CASE Dozer 2050 M is available for sale!",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Hot deal",
       views: "2.1K",
       price: "₹52L"
@@ -56,7 +57,7 @@ const data = {
       id: 4,
       title: "JCB Backhoe Loader",
       desc: "JCB Backhoe loader is available for sale!",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Hot deal",
       views: "1.5K",
       price: "₹38L"
@@ -67,7 +68,7 @@ const data = {
       id: 5,
       title: "Komatsu Grader",
       desc: "Great condition grader at low cost",
-      img: "/src/assets/video-thumb.jpg",
+      img: thumb,
       tag: "Verified",
       views: "945",
       price: "₹22L"
