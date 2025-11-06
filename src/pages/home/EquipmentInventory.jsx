@@ -18,7 +18,7 @@ const equipmentData = {
       "Tower Cranes",
       "Truck Mounted Cranes",
     ],
-    image: "thumb"
+    image: thumb
   },
   Earthmoving: {
     title: "Powerful Earthmoving Equipment",
@@ -32,7 +32,7 @@ const equipmentData = {
       "Motor Graders",
       "Skid Steer Loaders",
     ],
-    image: "thumb"
+    image: thumb
   },
   Road: {
     title: "Advanced Road Construction Machinery",
@@ -45,7 +45,7 @@ const equipmentData = {
       "Compactors",
       "Bitumen Sprayers",
     ],
-    image: "thumb"
+    image: thumb
   },
   Concreting: {
     title: "Complete Concreting Solutions",
@@ -58,7 +58,7 @@ const equipmentData = {
       "Concrete Pumps",
       "Vibrators",
     ],
-    image: "thumb"
+    image: thumb
   },
   Plant: {
     title: "Industrial Plant Equipment",
@@ -70,7 +70,7 @@ const equipmentData = {
       "Batching Plants",
       "Asphalt Plants",
     ],
-    image: "thumb"
+    image: thumb
   },
   Miscellaneous: {
     title: "Essential Construction Accessories",
@@ -83,7 +83,7 @@ const equipmentData = {
       "Material Hoists",
       "Welding Machines",
     ],
-    image: "thumb"
+    image: thumb
   },
 };
 
