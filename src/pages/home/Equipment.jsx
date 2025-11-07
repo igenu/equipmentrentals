@@ -90,7 +90,7 @@ export default function EquipmentTrends() {
   return (
     <section className="min-h-screen bg-yellow-100 py-16 px-4">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header Section */}
+        
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-bold mb-4 shadow-lg">
             <TrendingUp size={16} />
@@ -104,9 +104,9 @@ export default function EquipmentTrends() {
           </p>
         </div>
 
-        {/* Main Content Grid */}
+        
         <div className="grid lg:grid-cols-4 gap-6">
-          {/* Vertical Sidebar Tabs */}
+          
           <div className="lg:col-span-1">
             <div className="bg-white rounded-3xl p-4 shadow-xl border border-gray-100 sticky top-6">
               <div className="mb-4 p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-white">
@@ -162,9 +162,9 @@ export default function EquipmentTrends() {
             </div>
           </div>
 
-          {/* Content Area */}
+          
           <div className="lg:col-span-3">
-            {/* Active Category Header */}
+            
             <div className="bg-white rounded-3xl p-6 mb-6 shadow-lg border border-gray-100">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-4">
@@ -187,7 +187,7 @@ export default function EquipmentTrends() {
               </div>
             </div>
 
-            {/* Equipment Cards */}
+            
             <div className="grid md:grid-cols-2 gap-6">
               {data[active].map((item) => (
                 <div
@@ -196,7 +196,7 @@ export default function EquipmentTrends() {
                   onMouseLeave={() => setHoveredCard(null)}
                   className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-orange-200"
                 >
-                  {/* Image Container */}
+                  
                   <div className="relative h-64 overflow-hidden bg-gray-100">
                     <img
                       src={item.img}
@@ -204,10 +204,10 @@ export default function EquipmentTrends() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     
-                    {/* Gradient Overlay */}
+                    
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                     
-                    {/* Top Badges */}
+                    
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
                       <span className={`px-3 py-1.5 rounded-full text-xs font-bold text-white backdrop-blur-sm ${
                         item.tag === "Hot deal" ? "bg-red-500/90" : "bg-green-500/90"
@@ -220,7 +220,7 @@ export default function EquipmentTrends() {
                       </div>
                     </div>
 
-                    {/* Bottom Actions */}
+                    
                     <div className={`absolute bottom-4 left-4 right-4 transition-all duration-300 ${
                       hoveredCard === item.id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                     }`}>
@@ -234,13 +234,13 @@ export default function EquipmentTrends() {
                       </div>
                     </div>
 
-                    {/* Price Badge */}
+                    
                     <div className="absolute bottom-4 right-4 bg-orange-500 text-white px-4 py-2 rounded-xl font-black text-lg shadow-xl">
                       {item.price}
                     </div>
                   </div>
 
-                  {/* Card Content */}
+                  
                   <div className="p-6">
                     <h3 className="font-black text-xl text-gray-900 mb-2 group-hover:text-orange-500 transition-colors">
                       {item.title}
@@ -258,7 +258,7 @@ export default function EquipmentTrends() {
               ))}
             </div>
 
-            {/* Load More */}
+            
             <div className="text-center mt-8">
               <button className="bg-white hover:bg-gray-50 text-gray-900 font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all border-2 border-gray-200 hover:border-orange-500">
                 Load More Equipment

@@ -37,9 +37,9 @@ export default function MarketSection() {
                 <p class="text-gray-600 text-lg">Connect with trusted suppliers across major cities</p>
             </div>
             <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 px-4">
-                {/* Left Column - Enquiry Cards */}
+                
                 <div className="lg:col-span-2 space-y-6">
-                    {/* Sell Equipment */}
+                    
                     <div className="bg-white shadow rounded-2xl overflow-hidden">
                         <div className="flex items-center justify-between bg-gray-900 text-white px-6 py-4">
                             <h3 className="text-lg font-semibold">Want to Sell Your Equipment?</h3>
@@ -69,7 +69,7 @@ export default function MarketSection() {
                         </ul>
                     </div>
 
-                    {/* Rent Equipment */}
+                    
                     <div className="bg-white shadow rounded-2xl overflow-hidden">
                         <div className="flex items-center justify-between bg-orange-500 text-white px-6 py-4">
                             <h3 className="text-lg font-semibold">Want to Rent Your Equipment?</h3>
@@ -101,7 +101,7 @@ export default function MarketSection() {
                     </div>
                 </div>
 
-                {/* Right Column - Latest News */}
+                
                 <div className="bg-white shadow rounded-2xl p-6 flex flex-col justify-between">
 
                     <div className="space-y-5">

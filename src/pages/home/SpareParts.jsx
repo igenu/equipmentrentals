@@ -27,7 +27,7 @@ export default function SpareParts() {
 
   return (
     <section className="relative py-20 px-4 overflow-hidden bg-gray-900">
-      {/* Animated background pattern */}
+      
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-4 border-orange-500 rounded-full animate-pulse"></div>
         <div className="absolute top-40 right-20 w-24 h-24 border-4 border-orange-400 rounded-lg rotate-45 animate-spin" style={{animationDuration: '10s'}}></div>
@@ -37,7 +37,7 @@ export default function SpareParts() {
 
       <div className="max-w-7xl mx-auto relative z-10 px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          
           <div className="text-white space-y-6">
             <div className="inline-block">
               <span className="text-orange-500 font-semibold text-sm tracking-wider uppercase border-l-4 border-orange-500 pl-3">
@@ -69,7 +69,7 @@ export default function SpareParts() {
             </button>
           </div>
 
-          {/* Right Features Grid */}
+          
           <div className="grid grid-cols-2 gap-4">
             {features.map((feature, index) => (
               <div
@@ -90,7 +90,7 @@ export default function SpareParts() {
           </div>
         </div>
 
-        {/* Bottom Stats Bar */}
+        
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700">
             <div className="text-3xl font-bold text-orange-500 mb-1">10K+</div>

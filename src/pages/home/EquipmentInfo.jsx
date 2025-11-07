@@ -4,7 +4,7 @@ export default function EquipmentInfo() {
   return (
     <section className="bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-        {/* LEFT: Text Content */}
+        
         <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-bold text-gray-900 leading-snug">
             Lowest Price, Exclusive and Largest Choice of <br />
@@ -20,9 +20,9 @@ export default function EquipmentInfo() {
           </p>
         </div>
 
-        {/* MIDDLE: Video Card */}
+        
         <div className="bg-white rounded-xl  shadow-md overflow-hidden hover:shadow-lg transition-all">
-          {/* <div className="bg-orange-500 h-2 w-full"></div> */}
+          
           <div className="relative">
             <video
               controls
@@ -35,7 +35,7 @@ export default function EquipmentInfo() {
           </div>
         </div>
 
-        {/* RIGHT: Advertisement Card */}
+        
         <div className="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-all text-center">
           <p className="text-sm text-white uppercase tracking-wide mt-3">
             Advertisement

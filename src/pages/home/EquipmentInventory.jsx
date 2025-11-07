@@ -93,7 +93,7 @@ export default function EquipmentInventory() {
 
   return (
     <section className="bg-gray-100 py-10 px-4">
-      {/* Header */}
+      
       <div className="text-center mb-12 max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
           India's Largest Construction
@@ -106,7 +106,7 @@ export default function EquipmentInventory() {
         </p>
       </div>
 
-      {/* Tabs */}
+      
       <div className="flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto">
         {tabs.map((tab) => (
           <button
@@ -123,10 +123,10 @@ export default function EquipmentInventory() {
         ))}
       </div>
 
-      {/* Content Card */}
+      
       <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
         <div className="grid md:grid-cols-3 gap-0">
-          {/* Left Content */}
+          
           <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">
             <div className="inline-block px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4 self-start">
               Featured Category
@@ -150,7 +150,7 @@ export default function EquipmentInventory() {
             </div>
           </div>
 
-          {/* Center Image */}
+          
           <div className="relative overflow-hidden">
             <img 
               src={currentData.image}
@@ -160,7 +160,7 @@ export default function EquipmentInventory() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
           </div>
 
-          {/* Right List */}
+          
           <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-10 text-white">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <span className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-sm">
@@ -190,7 +190,7 @@ export default function EquipmentInventory() {
         </div>
       </div>
 
-      {/* CTA Buttons */}
+      
       <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12 max-w-2xl mx-auto">
         <button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
           <Search size={20} className="group-hover:scale-110 transition-transform" />

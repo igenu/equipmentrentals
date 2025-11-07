@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-8 gap-8 mb-10 mt-5">
         
-        {/* LEFT CONTENT */}
+        
         <div className="col-span-3 space-y-6">
           <p className="uppercase text-sm font-semibold text-gray-700 tracking-wider">
             Welcome to Equipment Rentals India
@@ -16,7 +16,7 @@ export default function Hero() {
 
           <h1 className="text-4xl font-extrabold text-[#1E1E1E] leading-tight">
             Rent • Buy • Sell • Finance • Spare Parts for Construction, Mining and Industrial Equipment{" "}
-            {/* <span className="text-orange-500 italic font-medium">Rentals</span> */}
+            
           </h1>
 
           <p className="text-gray-600 mb-10">
@@ -30,7 +30,7 @@ export default function Hero() {
             View Equipment Requirement <ArrowRight className='w-4'/>
           </button>
 
-          {/* Reviews */}
+          
           <div className="flex items-center gap-3 pt-8">
             <div className="flex -space-x-3">
               <img
@@ -60,7 +60,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CENTER IMAGE */}
+        
         <div className="col-span-3">
           <div className="bg-orange-500 rounded-3xl relative p-4 md:p-8 flex justify-center items-center">
             <img
@@ -68,7 +68,7 @@ export default function Hero() {
               alt="machine"
               className="max-w-[146%] h-auto drop-shadow-xl mr-20"
             />
-            {/* Happy client box */}
+            
             <div className="absolute bottom-6 right-6 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl px-6 py-4 text-center">
               <p className="text-2xl font-bold text-gray-800">2.7k</p>
               <p className="text-xs font-semibold text-gray-600 uppercase">
@@ -78,9 +78,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT SIDEBAR */}
+        
         <div className="md:col-span-2 col-span-3 space-y-6 bg-white p-4 rounded-xl">
-          {/* Video Thumbnail */}
+          
 
           <div className="bg-gray-100">
           <div className="relative w-[200px] m-auto pb-5 pt-3 ">
@@ -92,12 +92,12 @@ export default function Hero() {
             <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500 text-white p-4 rounded-full shadow-lg">
               <Play size={24} />
             </button>
-            {/* pulse animation */}
+            
             <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping bg-orange-500 opacity-30 w-16 h-16 rounded-full"></span>
           </div>
           </div>
 
-          {/* Find Equipment Form */}
+          
           <div className="">
             <h3 className="text-md font-semibold text-gray-800 mb-4">
               SUBMIT YOUR REQUIREMENTS
