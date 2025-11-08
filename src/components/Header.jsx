@@ -71,11 +71,11 @@ export default function Header() {
                     {/* Desktop Menu */}
                     <nav className="hidden md:flex items-center gap-8">
                         <a href="#" className="text-orange-500 font-medium">Home</a>
-                        <a href="#" className="hover:text-orange-500">About Us</a>
-                        <a href="#" className="hover:text-orange-500">Browse Equipment List</a>
-                        <a href="#" className="hover:text-orange-500">List Your Equipment</a>
-                        <a href="#" className="hover:text-orange-500">ERI Assist Plan</a>
-                        <a href="#" className="hover:text-orange-500">Spare Parts</a>
+                        <a href="/about" className="hover:text-orange-500">About Us</a>
+                        <a href="/browseequipment" className="hover:text-orange-500">Browse Equipment List</a>
+                        <a href="/equipmentform" className="hover:text-orange-500">List Your Equipment</a>
+                        <a href="/" className="hover:text-orange-500">ERI Assist Plan</a>
+                        <a href="sparepartsform" className="hover:text-orange-500">Spare Parts</a>
 
                         {/* <div className="relative group">
             <button className="flex items-center gap-1 hover:text-orange-500">

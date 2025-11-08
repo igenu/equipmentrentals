@@ -1,12 +1,15 @@
 import React from 'react'
-import Ban from './ban'
+import Banner from './Banner'
+import AboutEquipment from './AboutEquipment'
+import WhatWeOffer from './WhatWeOffer'
 
 
 function About() {
   return (
     <div>
-        <Ban />
         <Banner />
+        <AboutEquipment />
+        <WhatWeOffer />
     </div>
   )
 }

@@ -6,7 +6,7 @@ import EquipmentInventory from './EquipmentInventory'
 import MarketSection from './MarketSection'
 import ERIPlatform from './ERIPlatform'
 import EquipmentInfo from './EquipmentInfo'
-import Products from './Products'
+
 
 
 function Home() {

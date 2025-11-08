@@ -6,6 +6,10 @@ import { useAuth } from "../utils/idb";
 import { useEffect } from "react";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/home/Home";
+import About from "../pages/about/About";
+import BrowseEquipment from "../pages/browseequipment/BrowseEquipment";
+import EquipmentForm from "../pages/equipmentform/EquipmentForm";
+import SparePartsForm from "../pages/sparepartsform/SparePartsForm";
 
 
 
@@ -20,6 +24,11 @@ export default function AppRouter() {
         <Route element={<PrivateRoute />}>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/browseequipment" element={<BrowseEquipment />} />
+            <Route path="/equipmentform" element={<EquipmentForm />} />
+            <Route path="/sparepartsform" element={<SparePartsForm />} />
+
           </Route>
         </Route>
         
