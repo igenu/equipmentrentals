@@ -74,7 +74,7 @@ export default function Header() {
                         <a href="/about" className="hover:text-orange-500">About Us</a>
                         <a href="/browseequipment" className="hover:text-orange-500">Browse Equipment List</a>
                         <a href="/equipmentform" className="hover:text-orange-500">List Your Equipment</a>
-                        <a href="/" className="hover:text-orange-500">ERI Assist Plan</a>
+                        <a href="/ERIAssist" className="hover:text-orange-500">ERI Assist Plan</a>
                         <a href="sparepartsform" className="hover:text-orange-500">Spare Parts</a>
 
                         {/* <div className="relative group">

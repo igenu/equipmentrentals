@@ -8,8 +8,9 @@ import Dashboard from "../pages/Dashboard";
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import BrowseEquipment from "../pages/browseequipment/BrowseEquipment";
-import EquipmentForm from "../pages/equipmentform/EquipmentForm";
+import EquipmentForm from "../pages/EquipmentForm/EquipmentForm";
 import SparePartsForm from "../pages/sparepartsform/SparePartsForm";
+import ERIAssist from "../pages/ERIAssist/ERIAssistHome";
 
 
 
@@ -28,6 +29,7 @@ export default function AppRouter() {
             <Route path="/browseequipment" element={<BrowseEquipment />} />
             <Route path="/equipmentform" element={<EquipmentForm />} />
             <Route path="/sparepartsform" element={<SparePartsForm />} />
+            <Route path="/ERIAssist" element={<ERIAssist />} />
 
           </Route>
         </Route>
