@@ -51,14 +51,7 @@ const WhatWeOffer = () => {
             </button>
           </div>
 
-          {/* Center Image */}
-          {/* <div className="col-span-1 flex justify-center">
-            <img
-              src={excavatorImg}
-              alt="Excavator"
-              className="rounded-3xl shadow-lg object-cover w-full max-w-md"
-            />
-          </div> */}
+          
 
           
           <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">

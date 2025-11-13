@@ -7,10 +7,10 @@ const ERIAssistBanner = () => {
       className="relative h-screen flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImg})` }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Content */}
+      
       <div className="relative z-10 max-w-3xl text-center bg-white/20 backdrop-blur-md p-10 rounded-3xl shadow-lg">
         <h2 className="text-yellow-400 text-2xl sm:text-3xl font-semibold mb-3">
           Machines available for Rent or Sale? – Use{" "}
@@ -33,7 +33,7 @@ const ERIAssistBanner = () => {
         </button>
       </div>
 
-      {/* Skip button */}
+      
       <button className="absolute top-5 right-5 text-white bg-black/40 hover:bg-black/60 px-4 py-1 rounded-md transition">
         Skip
       </button>

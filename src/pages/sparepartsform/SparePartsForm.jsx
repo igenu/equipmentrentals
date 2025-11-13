@@ -43,9 +43,9 @@ export default function SparePartsForm() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+    <div className="min-h-screen">
+      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-4 lg:px-4" >
+        
         <div className="bg-gradient-to-r from-gray-50 to-orange-50 rounded-2xl p-8 mb-8 border border-gray-200">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Quality <span className="text-orange-500">SPARE PARTS</span> for your equipment
@@ -56,7 +56,7 @@ export default function SparePartsForm() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left Section - Image & Why Order */}
+          
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 mb-6">
               <img 
@@ -82,10 +82,10 @@ export default function SparePartsForm() {
             </div>
           </div>
 
-          {/* Right Section - Form */}
+          
           <div className="lg:col-span-2">
             <div className="space-y-6">
-              {/* Customer Information */}
+              
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
                 <div className="border-l-4 border-orange-500 pl-4 mb-6">
                   <h2 className="text-xl font-bold text-gray-900">Customer Information</h2>
@@ -143,7 +143,7 @@ export default function SparePartsForm() {
                 </div>
               </div>
 
-              {/* Equipment + Parts Information */}
+              
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
                 <div className="border-l-4 border-orange-500 pl-4 mb-6">
                   <h2 className="text-xl font-bold text-gray-900">Equipment + Parts Information</h2>
@@ -206,7 +206,7 @@ export default function SparePartsForm() {
                       />
                     </div>
 
-                    {/* Parts Section */}
+                    
                     {equipment.parts.map((part, partIndex) => (
                       <div key={part.id} className="bg-gray-50 rounded-xl p-4 mb-4">
                         <div className="flex justify-between items-center mb-4">
@@ -276,7 +276,7 @@ export default function SparePartsForm() {
                 </button>
               </div>
 
-              {/* Submit Button */}
+              
               <div className="flex justify-end">
                 <button
                   type="button"

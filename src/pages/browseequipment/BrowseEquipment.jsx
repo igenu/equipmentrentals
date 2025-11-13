@@ -81,7 +81,7 @@ export default function BrowseEquipment() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Breadcrumb */}
+      
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 py-4">
           <div className="flex items-center gap-2 text-sm">
@@ -94,7 +94,7 @@ export default function BrowseEquipment() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 py-8">
         <div className="grid lg:grid-cols-4 gap-8">
-          {/* Sidebar Filters */}
+          
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 sticky top-8">
               <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-4 rounded-t-xl">
@@ -105,7 +105,7 @@ export default function BrowseEquipment() {
               </div>
 
               <div className="p-4 space-y-6">
-                {/* Category Filter */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     By Categories
@@ -119,7 +119,7 @@ export default function BrowseEquipment() {
                   </select>
                 </div>
 
-                {/* Zone Filter */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Select Zone
@@ -133,7 +133,7 @@ export default function BrowseEquipment() {
                   </select>
                 </div>
 
-                {/* Equipment Type */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Equipment Type
@@ -146,7 +146,7 @@ export default function BrowseEquipment() {
                   </select>
                 </div>
 
-                {/* Usage Hours */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Usage (hours)
@@ -161,7 +161,7 @@ export default function BrowseEquipment() {
                   </button>
                 </div>
 
-                {/* Equipment Name Search */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Enter Equipment Name
@@ -178,7 +178,7 @@ export default function BrowseEquipment() {
                 </div>
               </div>
 
-              {/* Equipment Description */}
+              
               <div className="bg-slate-800 text-white p-4 rounded-b-xl">
                 <h3 className="font-bold mb-3">Equipment Description</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
@@ -188,14 +188,14 @@ export default function BrowseEquipment() {
             </div>
           </div>
 
-          {/* Main Content */}
+          
           <div className="lg:col-span-3">
             <div className="mb-6">
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Browse Equipment List</h1>
               <p className="text-gray-600">Discover quality construction equipment available across India</p>
             </div>
 
-            {/* Equipment Grid */}
+            
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
               {equipmentList.map((equipment) => (
                 <div 
@@ -222,14 +222,7 @@ export default function BrowseEquipment() {
                         </span>
                       )}
                     </div>
-                    {/* <button 
-                      onClick={() => toggleWatchlist(equipment.id)}
-                      className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md hover:bg-gray-50 transition-colors"
-                    >
-                      <Heart 
-                        className={`w-5 h-5 ${watchlist.includes(equipment.id) ? 'fill-red-500 text-red-500' : 'text-gray-600'}`}
-                      />
-                    </button> */}
+                    
                   </div>
 
                   <div className="p-5">

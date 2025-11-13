@@ -34,10 +34,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white">
-      {/* Main Footer Content */}
+      
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-12 gap-8">
-          {/* Left Section - Categories */}
+          
           <div className="lg:col-span-4">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
               <span className="w-1 h-8 bg-orange-500"></span>
@@ -73,7 +73,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Center Section - CTA */}
+          
           <div className="lg:col-span-4 flex flex-col justify-center items-center text-center bg-gradient-to-br from-orange-500/10 to-orange-600/5 rounded-2xl p-8 border border-orange-500/20">
             <div className="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-orange-500/50">
               <Upload className="w-10 h-10" />
@@ -88,9 +88,9 @@ export default function Footer() {
             </button>
           </div>
 
-          {/* Right Section - Social & Info */}
+          
           <div className="lg:col-span-4 space-y-6">
-            {/* Facebook Widget */}
+            
             <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-2xl p-6 border border-blue-500/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
@@ -110,7 +110,7 @@ export default function Footer() {
               </button>
             </div>
 
-            {/* Contact Info */}
+            
             <div className="bg-gray-800/50 rounded-2xl p-6 space-y-4">
               <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
               
@@ -128,7 +128,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Social Icons */}
+            
             <div className="flex gap-3">
               <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-all hover:scale-110">
                 <Facebook className="w-5 h-5" />
@@ -147,14 +147,14 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
             <p>© 2025 Equipment Rentals India. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-orange-500 transition-colors">Sitemap</a>
-              <a href="#" className="hover:text-orange-500 transition-colors">View the Latest Blog</a>
+              <a href="/BlogPage" className="hover:text-orange-500 transition-colors">View the Latest Blog</a>
               <a href="#" className="hover:text-orange-500 transition-colors">Job Opportunities</a>
               <a href="#" className="hover:text-orange-500 transition-colors">Advertise With Us</a>
             </div>

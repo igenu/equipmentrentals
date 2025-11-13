@@ -5,7 +5,7 @@ const AboutERI = () => {
   return (
     <section className=" py-16">
       <div className="max-w-7xl mx-auto  px-4">
-        <div className="bg-white rounded-3xl shadow-sm overflow-hidden p-8 md:p-12 flex flex-col md:flex-row gap-10">
+        <div className=" overflow-hidden flex flex-col md:flex-row gap-10">
           
           <div className="md:w-1/2">
             <img
@@ -79,7 +79,7 @@ const AboutERI = () => {
               ))}
             </div>
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-gray-100 p-6 rounded-2xl">
+              <div className="bg-white shadow p-6 rounded-2xl">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                   Vision
                 </h3>
@@ -88,7 +88,7 @@ const AboutERI = () => {
                   excellence.
                 </p>
               </div>
-              <div className="bg-gray-100 p-6 rounded-2xl">
+              <div className="bg-white shadow p-6 rounded-2xl">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                   Mission
                 </h3>
