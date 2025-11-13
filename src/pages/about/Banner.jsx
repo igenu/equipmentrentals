@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function AboutHeader() {
   return (
-    <section className="relative  py-16 border-b border-gray-200 max-w-7xl mx-auto  px-4">
+    <section className="relative  py-3 border-b border-gray-200 max-w-7xl mx-auto  px-4">
       
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')] opacity-10" />
 

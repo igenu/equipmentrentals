@@ -66,7 +66,7 @@ export default function Hero() {
             <img
               src={machine}
               alt="machine"
-              className="max-w-[146%] h-auto drop-shadow-xl mr-20"
+              className="max-w-[146%] h-auto drop-shadow-xl md:mr-20"
             />
             
             <div className="absolute bottom-6 right-6 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl px-6 py-4 text-center">

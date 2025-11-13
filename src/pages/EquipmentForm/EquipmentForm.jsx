@@ -2,7 +2,7 @@ import React from "react";
 
 const EquipmentForm = () => {
   return (
-    <section className="bg-gray-50 py-12">
+    <section className=" pb-12 pt-4">
       <div className="max-w-6xl mx-auto bg-white shadow-md rounded-2xl p-8">
         <h2 className="text-2xl font-semibold text-gray-800 mb-8 border-b pb-3">
           Add Equipment Details

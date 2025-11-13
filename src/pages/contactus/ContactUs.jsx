@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactUs() {
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className=" pb-16 pt-4 px-6">
       
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
