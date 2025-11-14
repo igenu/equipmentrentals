@@ -187,11 +187,82 @@ export default function Header() {
                     </div>
 
                     <nav className="flex flex-col p-4 space-y-3">
-                        <a href="#" className="text-orange-500 font-medium">Home</a>
-                        <a href="#" className="hover:text-orange-500">About</a>
-                        <a href="#" className="hover:text-orange-500">Equipment</a>
-                        <a href="#" className="hover:text-orange-500">Pages</a>
-                        <a href="#" className="hover:text-orange-500">Contact Us</a>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            Home
+                        </NavLink>
+
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            About Us
+                        </NavLink>
+
+                        <NavLink
+                            to="/browseequipment"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            Browse Equipment List
+                        </NavLink>
+
+                        <NavLink
+                            to="/equipmentform"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            List Your Equipment
+                        </NavLink>
+
+                        <NavLink
+                            to="/ERIAssist"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            ERI Assist Plan
+                        </NavLink>
+
+                        <NavLink
+                            to="/sparepartsform"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            Spare Parts
+                        </NavLink>
+
+                        <NavLink
+                            to="/contactus"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            Contact Us
+                        </NavLink>
                         <a href="#" className="hover:text-orange-500">login</a>
                         <a href="#" className="hover:text-orange-500">Register</a>
                         <a href="/equipmentform" className="bg-orange-500 text-white font-medium px-4 py-2 rounded-lg hover:bg-orange-600 transition">

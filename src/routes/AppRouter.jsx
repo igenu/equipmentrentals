@@ -16,6 +16,7 @@ import LoginPage from "../pages/LoginPage/LoginPageHome";
 import RegisterPage from "../pages/RegisterPage/RegisterPageHome";
 import BlogPage from "../pages/BlogPage/BlogPageHome";
 import BlogDetail from "../pages/BlogDetail/BlogDetailHome";
+import EquipmentDetail from "../pages/EquipmentDetail/EquipmentDetailHome";
 
 
 
@@ -40,6 +41,7 @@ export default function AppRouter() {
             <Route path="/RegisterPage" element={<RegisterPage />} />
             <Route path="/BlogPage" element={<BlogPage />} />
             <Route path="/BlogDetail" element={<BlogDetail />} />
+            <Route path="/EquipmentDetail" element={<EquipmentDetail />} />
 
           </Route>
         </Route>

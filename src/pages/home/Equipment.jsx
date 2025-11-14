@@ -180,10 +180,10 @@ export default function EquipmentTrends() {
                     </p>
                   </div>
                 </div>
-                <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 flex items-center gap-2">
+                <a href="/EquipmentDetail" className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 flex items-center gap-2">
                   View All
                   <ArrowRight size={16} />
-                </button>
+                </a>
               </div>
             </div>
 
@@ -249,10 +249,10 @@ export default function EquipmentTrends() {
                       {item.desc}
                     </p>
                     
-                    <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl group">
+                    <a href="/EquipmentDetail" className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl group">
                       <span>View Details</span>
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -260,9 +260,9 @@ export default function EquipmentTrends() {
 
             
             <div className="text-center mt-8">
-              <button className="bg-white hover:bg-gray-50 text-gray-900 font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all border-2 border-gray-200 hover:border-orange-500">
+              <a href="/browseequipment" className="bg-white hover:bg-gray-50 text-gray-900 font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all border-2 border-gray-200 hover:border-orange-500">
                 Load More Equipment
-              </button>
+              </a>
             </div>
           </div>
         </div>
