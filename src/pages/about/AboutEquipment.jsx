@@ -3,7 +3,7 @@ import aboutImg from "../../assets/about-equipments.jpg"; // replace with your a
 
 const AboutERI = () => {
   return (
-    <section className=" py-16">
+    <section className="md:py-16 py-10">
       <div className="max-w-7xl mx-auto  px-4">
         <div className=" overflow-hidden flex flex-col md:flex-row gap-10">
           
@@ -21,7 +21,7 @@ const AboutERI = () => {
             <h4 className="uppercase text-sm font-bold tracking-widest text-gray-600">
               About Us
             </h4>
-            <h2 className="text-4xl font-bold text-gray-800 mt-2">
+            <h2 className="md:text-4xl text-2xl  font-bold text-gray-800 mt-2">
               Discover Our{" "}
               <span className="text-orange-500 italic font-semibold">
                 Journey and Vision

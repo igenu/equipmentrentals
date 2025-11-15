@@ -239,13 +239,13 @@ export default function BrowseEquipment() {
                     </div>
 
                     <div className="flex gap-2">
-                      <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-2 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-[12px]">
+                      <a href='' className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-2 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-[12px]">
                         <Eye className="w-4 h-4" />
                         View Details
-                      </button>
-                      <button className="px-3 border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 rounded-lg font-medium transition-colors text-[12px]">
+                      </a>
+                      <a href='' className="px-3 border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 rounded-lg font-medium transition-colors text-[12px]">
                         Add to Watchlist
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

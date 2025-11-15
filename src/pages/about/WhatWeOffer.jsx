@@ -27,7 +27,7 @@ const WhatWeOffer = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 md:py-20 py-10">
       <div className="max-w-7xl mx-auto  px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-end">
           
@@ -35,7 +35,7 @@ const WhatWeOffer = () => {
             <h4 className="uppercase text-sm font-semibold text-gray-500 mb-3">
               What We Offer
             </h4>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
+            <h2 className="text-2xl md:text-5xl font-bold text-gray-900 leading-snug">
               <span className="text-orange-500 italic font-semibold">
                 Top-Tier
               </span>{" "}

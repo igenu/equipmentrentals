@@ -35,7 +35,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white">
       
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 md:py-16 py-8">
         <div className="grid lg:grid-cols-12 gap-8">
           
           <div className="lg:col-span-4">
@@ -48,7 +48,7 @@ export default function Footer() {
                 <div key={index} className="border-b border-gray-800">
                   <button
                     onClick={() => setOpenCategory(openCategory === index ? null : index)}
-                    className={`w-full py-3 px-4 flex items-center justify-between transition-all ${
+                    className={`w-full py-3 px-4 flex items-center justify-between transition-all text-[14px] md:text-[16px] ${
                       category.highlight 
                         ? "" 
                         : "hover:bg-gray-800 text-gray-300"
@@ -150,9 +150,9 @@ export default function Footer() {
       
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center md:gap-4 gap-6 text-sm text-gray-400">
             <p>© 2025 Equipment Rentals India. All rights reserved.</p>
-            <div className="flex gap-6">
+            <div className="flex gap-6 text-[12px] md:text-[14px]">
               <a href="#" className="hover:text-orange-500 transition-colors">Sitemap</a>
               <a href="/BlogPage" className="hover:text-orange-500 transition-colors">View the Latest Blog</a>
               <a href="#" className="hover:text-orange-500 transition-colors">Job Opportunities</a>

@@ -26,7 +26,7 @@ export default function SpareParts() {
   ];
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden bg-gray-900">
+    <section className="relative md:py-20 py-10 px-4 overflow-hidden bg-gray-900">
       
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-4 border-orange-500 rounded-full animate-pulse"></div>

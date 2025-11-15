@@ -30,18 +30,18 @@ export default function MarketSection() {
     ];
 
     return (
-        <section className="bg-gray-50 py-12">
-            <div class="text-center mb-12 max-w-3xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">India's Largest Construction</h2>
-                <h2 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-4">Equipment Inventory</h2>
-                <p class="text-gray-600 text-lg">Connect with trusted suppliers across major cities</p>
+        <section className="bg-gray-50 md:py-12 py-6">
+            <div class="text-center md:mb-12 mb-6 max-w-3xl mx-auto">
+                <h2 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">India's Largest Construction</h2>
+                <h2 class="text-xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-4">Equipment Inventory</h2>
+                <p class="text-gray-600 md:text-lg">Connect with trusted suppliers across major cities</p>
             </div>
             <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 px-4">
                 
                 <div className="lg:col-span-2 space-y-6">
                     
                     <div className="bg-white shadow rounded-2xl overflow-hidden">
-                        <div className="flex items-center justify-between bg-gray-900 text-white px-6 py-4">
+                        <div className="flex md:flex-row flex-col md:items-center justify-between bg-gray-900 text-white md:px-6 px-4 py-4 md:gap-0 gap-3">
                             <h3 className="text-lg font-semibold">Want to Sell Your Equipment?</h3>
                             <div className="relative">
                                 <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
@@ -55,9 +55,9 @@ export default function MarketSection() {
                         <ul className="divide-y divide-gray-100">
                             {buyData.map((item, idx) => (
                                 <li key={idx} className="flex justify-between items-center p-4 hover:bg-gray-50">
-                                    <p className="text-sm text-gray-700">{item.title}</p>
+                                    <p className="md:text-sm text-sm text-gray-700">{item.title}</p>
                                     <span
-                                        className={`text-xs font-medium px-3 py-1 rounded-full ${item.status === "Closed"
+                                        className={`text-xs whitespace-nowrap font-medium px-3 py-1 rounded-full ${item.status === "Closed"
                                             ? "bg-green-100 text-green-700"
                                             : "bg-orange-100 text-orange-700"
                                             }`}
@@ -71,7 +71,7 @@ export default function MarketSection() {
 
                     
                     <div className="bg-white shadow rounded-2xl overflow-hidden">
-                        <div className="flex items-center justify-between bg-orange-500 text-white px-6 py-4">
+                        <div className="flex md:flex-row flex-col md:items-center justify-between bg-gray-900 text-white md:px-6 px-4 py-4 md:gap-0 gap-3">
                             <h3 className="text-lg font-semibold">Want to Rent Your Equipment?</h3>
                             <div className="relative">
                                 <Search className="absolute left-3 top-2.5 text-gray-300" size={18} />
@@ -85,16 +85,15 @@ export default function MarketSection() {
                         <ul className="divide-y divide-gray-100">
                             {rentData.map((item, idx) => (
                                 <li key={idx} className="flex justify-between items-center p-4 hover:bg-gray-50">
-                                    <p className="text-sm text-gray-700">{item.title}</p>
+                                    <p className="md:text-sm text-sm text-gray-700">{item.title}</p>
                                     <span
-                                        className={`text-xs font-medium px-3 py-1 rounded-full ${item.status === "Closed"
+                                        className={`text-xs whitespace-nowrap font-medium px-3 py-1 rounded-full ${item.status === "Closed"
                                             ? "bg-green-100 text-green-700"
                                             : "bg-orange-100 text-orange-700"
                                             }`}
                                     >
                                         {item.status}
                                     </span>
-                                    
                                 </li>
                             ))}
                         </ul>
@@ -102,7 +101,7 @@ export default function MarketSection() {
                 </div>
 
                 
-                <div className="bg-white shadow rounded-2xl p-6 flex flex-col justify-between">
+                <div className="bg-white shadow rounded-2xl md:p-6 p-4 flex flex-col justify-between">
 
                     <div className="space-y-5">
                         <div className="flex items-center gap-2 mb-5">

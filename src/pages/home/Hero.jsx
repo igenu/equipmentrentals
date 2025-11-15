@@ -6,32 +6,32 @@ import videoThumb from "../../assets/video-thumb.jpg";
 export default function Hero() {
   return (
     <section className="">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-8 gap-8 mb-10 mt-5">
+      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-8 md:gap-8 gap-4 mb-10 mt-5">
         
         
-        <div className="col-span-3 space-y-6">
+        <div className="col-span-3 md:space-y-6 space-y-4">
           <p className="uppercase text-sm font-semibold text-gray-700 tracking-wider">
             Welcome to Equipment Rentals India
           </p>
 
-          <h1 className="text-4xl font-extrabold text-[#1E1E1E] leading-tight">
+          <h1 className="md:text-[35px] text-[20px]  font-extrabold text-[#1E1E1E] leading-tight">
             Rent • Buy • Sell • Finance • Spare Parts for Construction, Mining and Industrial Equipment{" "}
             
           </h1>
 
-          <p className="text-gray-600 mb-10">
+          <p className="text-gray-600 md:mb-10  md:text-[16px] text-[14px]">
             Equipment Rentals India is India’s leading marketplace to rent, buy, sell, finance and source spare parts for heavy construction equipment. Our database is updated daily with the latest machines and parts available nationwide.
           </p>
 
-          <button className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition flex gap-2 items-center">
+          <a href='/equipmentform' className="bg-orange-500 text-white font-semibold md:px-6 px-3 md:py-3 py-1 inline-flex md:text-[16px] text-[14px] rounded-lg hover:bg-orange-600 transition flex gap-2 items-center">
             Post Equipment Requirement <ArrowRight className='w-4'/>
-          </button>
-          <button className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition flex gap-2 items-center">
+          </a>
+          <a href='/equipmentform' className="bg-orange-500 text-white font-semibold md:px-6 px-3 md:py-3 py-1 inline-flex md:text-[16px] text-[14px] rounded-lg hover:bg-orange-600 transition flex gap-2 items-center">
             View Equipment Requirement <ArrowRight className='w-4'/>
-          </button>
+          </a>
 
           
-          <div className="flex items-center gap-3 pt-8">
+          <div className="flex items-center gap-3 md:pt-8 py-2">
             <div className="flex -space-x-3">
               <img
                 src="https://randomuser.me/api/portraits/women/32.jpg"
@@ -61,12 +61,12 @@ export default function Hero() {
         </div>
 
         
-        <div className="col-span-3">
-          <div className="bg-orange-500 rounded-3xl relative p-4 md:p-8 flex justify-center items-center">
+        <div className="col-span-3 bg-orange-500 rounded-3xl">
+          <div className=" relative p-4 md:p-8 flex justify-center items-center">
             <img
               src={machine}
               alt="machine"
-              className="max-w-[146%] h-auto drop-shadow-xl md:mr-20"
+              className="md:max-w-[146%] max-w-[70%] h-auto drop-shadow-xl md:mr-20 mr-10"
             />
             
             <div className="absolute bottom-6 right-6 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl px-6 py-4 text-center">
