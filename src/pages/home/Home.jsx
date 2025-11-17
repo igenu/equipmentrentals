@@ -14,11 +14,11 @@ function Home() {
   return (
     <div>
         <Hero />
+        <Equipment />
+        <ERIPlatform />
         <MarketSection />
         {/* <Categories /> */}
         <SpareParts />
-        <Equipment />
-        <ERIPlatform />
         <EquipmentInventory />
         <EquipmentInfo />
     </div>

@@ -41,7 +41,7 @@ export default function ERIPlatform() {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 overflow-hidden mt-8">
       
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -51,19 +51,19 @@ export default function ERIPlatform() {
 
       <div className="relative max-w-[1200px] mx-auto px-4">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <div className="inline-block mb-7">
             <span className="bg-blue-500/20 border border-blue-400/30 text-blue-200 px-4 py-2 rounded-full text-[12px] font-semibold">
               India's Leading Construction Equipment Aggregator
             </span>
           </div>
-          <h1 className="text-lg md:text-lg lg:text-2xl font-bold mb-6">
+          <h1 className="text-lg md:text-lg lg:text-xl font-bold mb-6">
             Buy, Sell, Hire Used and New  
             <span className="ml-2 mt-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
                Construction Equipment Online
             </span>
           </h1>
-          <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed text-[13px]">
+          <p className="text-gray-300  leading-relaxed text-[13px]">
             Equipment Rentals India (ERI) offers a comprehensive platform to buy, sell, and rent heavy construction machinery. Our online portal boasts an extensive and regularly updated database, ensuring that contractors across the nation can easily access equipment available for sale or rent at various locations throughout India.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function ERIPlatform() {
                       <Icon className="w-4 h-4 text-white" />
                     </div>
                     <h3 className="text-[15px] font-bold mb-2">{feature.title}</h3>
-                    <p className="text-sm text-gray-300">{feature.description}</p>
+                    <p className="text-[13px] text-gray-300">{feature.description}</p>
                   </div>
                 );
               })}

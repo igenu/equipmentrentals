@@ -15,8 +15,6 @@ const equipmentData = {
       "Overhead Cranes",
       "Rough Terrain Cranes",
       "Telescopic Cranes",
-      "Tower Cranes",
-      "Truck Mounted Cranes",
     ],
     image: thumb
   },
@@ -92,27 +90,27 @@ export default function EquipmentInventory() {
   const currentData = equipmentData[activeTab];
 
   return (
-    <section className="bg-gray-100 py-10 px-4">
+    <section className="bg-gray-100 py-8 px-4">
       
-      <div className="text-center mb-12 max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+      <div className="text-center mb-8 max-w-3xl mx-auto">
+        <h2 className="text-xl  font-bold text-gray-900 mb-3">
           India's Largest Construction
+          <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent ml-2">
+            Featured Category
+          </span>
         </h2>
-        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-4">
-          Equipment Inventory
-        </h2>
-        <p className="text-gray-600 text-lg">
+        <p className="text-gray-600 text-[14px]">
           Connect with trusted suppliers across major cities
         </p>
       </div>
 
       
-      <div className="flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-4xl mx-auto">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-6 py-3 font-semibold rounded-full transition-all duration-300 ${
+            className={`px-4 py-2 font-semibold rounded-full transition-all duration-300 text-[14px] ${
               activeTab === tab
                 ? "bg-orange-500 text-white shadow-lg shadow-orange-500/30 scale-105"
                 : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 hover:border-orange-300"
@@ -128,16 +126,16 @@ export default function EquipmentInventory() {
         <div className="grid md:grid-cols-3 gap-0">
           
           <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">
-            <div className="inline-block px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4 self-start">
+            <div className="inline-block px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-4 self-start">
               Featured Category
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+            <h3 className="text-xl font-bold mb-4 text-gray-900">
               {currentData.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-3 text-sm">
+            <p className="text-gray-600 leading-relaxed mb-3 text-[13px]">
               {currentData.description}
             </p>
-            <p className="text-gray-600 leading-relaxed mb-5 text-sm">
+            <p className="text-gray-600 leading-relaxed mb-5 text-[13px]">
               {currentData.locations}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -162,8 +160,8 @@ export default function EquipmentInventory() {
 
           
           <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-10 text-white">
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <span className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-sm">
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+              <span className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center text-[12px]">
                 {currentData.list.length}
               </span>
               {activeTab} Available
@@ -176,15 +174,15 @@ export default function EquipmentInventory() {
                     className="flex items-center gap-3 hover:bg-white/10 p-2 rounded-lg transition-colors cursor-pointer group"
                   >
                     <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform"></div>
-                    <span className="text-white/90 group-hover:text-white font-medium text-sm">{item}</span>
+                    <span className="text-white/90 group-hover:text-white font-medium text-[13px]">{item}</span>
                     <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" size={16} />
                   </li>
                 ))}
               </ul>
             </div>
-            <button className="w-full bg-white text-orange-600 hover:bg-gray-50 font-bold py-3 px-6 rounded-xl transition-all hover:shadow-lg flex items-center justify-center gap-2 group">
+            <button className="bg-white m-auto text-[12px] text-orange-600 hover:bg-gray-50 font-bold py-2 px-4 rounded-xl transition-all hover:shadow-lg flex items-center justify-center gap-2 group">
               View All Equipment
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              <ChevronRight className="group-hover:translate-x-1 transition-transform" size={13} />
             </button>
           </div>
         </div>

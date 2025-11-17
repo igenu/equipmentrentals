@@ -35,9 +35,9 @@ export default function MarketSection() {
     ];
 
     return (
-        <section className=" md:pb-6 pt-4">
+        <section className=" pb-8 pt-8">
             <div class="text-left md:mb-8 mb-6 max-w-[1200px] mx-auto px-4">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">India's Largest Construction <span class="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">Equipment Inventory</span></h2>
+                <h2 class="text-xl font-bold text-gray-900 mb-2">India's Largest Construction <span class="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">Equipment Inventory</span></h2>
                 
                 <p class="text-gray-600 md:text-[14px]">Connect with trusted suppliers across major cities</p>
             </div>

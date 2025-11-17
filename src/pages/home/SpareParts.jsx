@@ -63,10 +63,10 @@ export default function SpareParts() {
               Available to buy or request in just a few clicks. With doorstep delivery, responsive support, and competitive pricing, ERI makes keeping your machines running easier and faster than ever.
             </p>
 
-            <button className="group bg-orange-500 hover:bg-orange-600 text-[13px] text-white font-bold px-4 py-1 rounded-full transition-all duration-300 flex items-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105">
+            <a href="/sparepartsform" className="group bg-orange-500 hover:bg-orange-600 text-[13px] text-white font-bold px-4 py-1 rounded-full transition-all duration-300 inline-flex items-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105">
               Find Spare Parts
               <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
 
           
@@ -91,7 +91,7 @@ export default function SpareParts() {
         </div>
 
         
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
             <div className="text-lg font-bold text-orange-500 mb-1">10K+</div>
             <div className="text-gray-400 text-[13px]">Parts Available</div>

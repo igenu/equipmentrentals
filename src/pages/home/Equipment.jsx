@@ -88,15 +88,15 @@ export default function EquipmentTrends() {
   ];
 
   return (
-    <section className="min-h-screen bg-gray-50 py-8 px-4">
+    <section className="min-h-screen bg-gray-100 py-4 px-4">
       <div className="max-w-[1200px] mx-auto px-4">
         
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full text-[11px] font-bold mb-4 shadow-lg">
-            <TrendingUp size={16} />
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-1 rounded-full text-[11px] font-bold mb-4 shadow-lg">
+            <TrendingUp size={14} />
             <span>LIVE MARKETPLACE</span>
           </div>
-          <h1 className="text-3xl md:text-2xl font-black text-gray-900 mb-3">
+          <h1 className="text-3xl md:text-xl font-black text-gray-900 mb-3">
             Equipment <span className="text-orange-500">Marketplace</span>
           </h1>
           <p className="text-gray-600 text-[14px] max-w-2xl mx-auto">
@@ -180,7 +180,7 @@ export default function EquipmentTrends() {
                     </p>
                   </div>
                 </div>
-                <a href="/EquipmentDetail" className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg font-bold text-[11px] transition-all hover:scale-105 flex items-center gap-2">
+                <a href="/browseequipment" className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg font-bold text-[11px] transition-all hover:scale-105 flex items-center gap-2">
                   View All
                   <ArrowRight size={12} />
                 </a>
