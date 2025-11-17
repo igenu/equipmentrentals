@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="">
       <div className="max-w-[1200px] mx-auto px-4 ">
         
-        <div className='grid md:grid-cols-8 md:gap-6 gap-4 my-6  bg-white py-4 px-4 rounded-lg'>
+        <div className='grid md:grid-cols-8 md:gap-6 gap-4 mt-8 mb-4  bg-white py-4 px-4 rounded-lg'>
         <div className="col-span-3 md:space-y-4 space-y-4">
           <p className="uppercase text-sm font-semibold text-gray-700 tracking-wider">
             Welcome to Equipment Rentals India
@@ -66,10 +66,10 @@ export default function Hero() {
             <img
               src={machine}
               alt="machine"
-              className="md:max-w-[88%] max-w-[70%] h-auto drop-shadow-xl md:mr-10 mr-10"
+              className="md:max-w-[110%] max-w-[70%] h-auto drop-shadow-xl"
             />
             
-            <div className="absolute bottom-6 right-6 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl px-6 py-4 text-center">
+            <div className="absolute bottom-3 right-4 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl px-6 py-4 text-center">
               <p className="text-2xl font-bold text-gray-800">2.7k</p>
               <p className="text-xs font-semibold text-gray-600 uppercase">
                 Happy Client

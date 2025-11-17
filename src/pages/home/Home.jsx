@@ -18,8 +18,8 @@ function Home() {
         {/* <Categories /> */}
         <SpareParts />
         <Equipment />
-        <EquipmentInventory />
         <ERIPlatform />
+        <EquipmentInventory />
         <EquipmentInfo />
     </div>
   )

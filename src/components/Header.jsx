@@ -34,7 +34,7 @@ export default function Header() {
 
     return (
         <header className="">
-            <div className="max-w-[1200px] mx-auto md:px-4 px-4 md:pt-3 pt-3">
+            <div className="max-w-[1200px] mx-auto md:px-4 px-4 md:pt-5 pt-3">
                 <div className="bg-gray-800 md:py-3 py-3 md:px-4 px-3 text-white rounded-t-xl">
                     <div className="flex  justify-between gap-4 text-[13px]">
                         <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-2">

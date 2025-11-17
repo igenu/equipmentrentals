@@ -26,7 +26,7 @@ export default function SpareParts() {
   ];
 
   return (
-    <section className="relative md:py-20 py-10 px-4 overflow-hidden bg-gray-900">
+    <section className="relative md:py-10 py-10 px-4 overflow-hidden bg-gray-900">
       
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-4 border-orange-500 rounded-full animate-pulse"></div>
@@ -45,7 +45,7 @@ export default function SpareParts() {
               </span>
             </div>
             
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h2 className="text-5xl md:text-xl font-bold leading-tight">
               SPARE{" "}
               <span className="text-orange-500 relative">
                 PARTS
@@ -55,17 +55,17 @@ export default function SpareParts() {
               </span>
             </h2>
 
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-[13px] leading-relaxed">
               Equipment Rentals India brings the same market-leading reliability to spare parts that we do to equipment. Discover India's widest catalogue of high-quality aftermarket parts for excavators, loaders, cranes, pavers, and more.
             </p>
 
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400  text-[13px] leading-relaxed">
               Available to buy or request in just a few clicks. With doorstep delivery, responsive support, and competitive pricing, ERI makes keeping your machines running easier and faster than ever.
             </p>
 
-            <button className="group bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105">
+            <button className="group bg-orange-500 hover:bg-orange-600 text-[13px] text-white font-bold px-4 py-1 rounded-full transition-all duration-300 flex items-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105">
               Find Spare Parts
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
@@ -74,15 +74,15 @@ export default function SpareParts() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded-lg border border-gray-700 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
               >
-                <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                <div className="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">
+                <h3 className="text-white font-bold text-[14px] mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-[13px]">
                   {feature.description}
                 </p>
               </div>
@@ -92,21 +92,21 @@ export default function SpareParts() {
 
         
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700">
-            <div className="text-3xl font-bold text-orange-500 mb-1">10K+</div>
-            <div className="text-gray-400 text-sm">Parts Available</div>
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+            <div className="text-lg font-bold text-orange-500 mb-1">10K+</div>
+            <div className="text-gray-400 text-[13px]">Parts Available</div>
           </div>
-          <div className="text-center p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700">
-            <div className="text-3xl font-bold text-orange-500 mb-1">24/7</div>
-            <div className="text-gray-400 text-sm">Support</div>
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+            <div className="text-lg font-bold text-orange-500 mb-1">24/7</div>
+            <div className="text-gray-400 text-[13px]">Support</div>
           </div>
-          <div className="text-center p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700">
-            <div className="text-3xl font-bold text-orange-500 mb-1">48h</div>
-            <div className="text-gray-400 text-sm">Delivery Time</div>
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+            <div className="text-lg font-bold text-orange-500 mb-1">48h</div>
+            <div className="text-gray-400 text-[13px]">Delivery Time</div>
           </div>
-          <div className="text-center p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700">
-            <div className="text-3xl font-bold text-orange-500 mb-1">100%</div>
-            <div className="text-gray-400 text-sm">Genuine Parts</div>
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+            <div className="text-lg font-bold text-orange-500 mb-1">100%</div>
+            <div className="text-gray-400 text-[13px]">Genuine Parts</div>
           </div>
         </div>
       </div>
