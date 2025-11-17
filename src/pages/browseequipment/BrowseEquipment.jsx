@@ -83,7 +83,7 @@ export default function BrowseEquipment() {
     <div className="min-h-screen bg-gray-50">
       
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 py-4">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-4 lg:px-4 py-4">
           <div className="flex items-center gap-2 text-sm">
             <span className="text-gray-600">Home</span>
             <ChevronRight className="w-4 h-4 text-gray-400" />
@@ -92,7 +92,7 @@ export default function BrowseEquipment() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 py-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-4 lg:px-4 py-8">
         <div className="grid lg:grid-cols-4 gap-8">
           
           <div className="lg:col-span-1">

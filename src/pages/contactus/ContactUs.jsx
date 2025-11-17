@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin } from "lucide-react";
-
+import thumb from "../../assets/video-thumb.jpg";
 export default function ContactUs() {
   return (
     <section className=" pb-16 pt-4 px-6">
@@ -138,7 +138,7 @@ export default function ContactUs() {
           
           <div className="rounded-xl overflow-hidden border mt-6">
             <img
-              src="https://scontent.fmaa3-3.fna.fbcdn.net/v/t51.82787-15/521073509_18132970804430021_7838825231091728920_n.jpg?stp=dst-jpg_p350x350_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e5c1b6&_nc_ohc=8mFTKj_AilUQ7kNvwEM_6uw&_nc_oc=Admj8ptTyHNLP7z15GKCAX5L_MnnMKtyHbUwAuQ-DAhcXo3wD03odHY-cvACNJnfBjzTzgTDRTvEWXQOR_1yBkhk&_nc_zt=23&_nc_ht=scontent.fmaa3-3.fna&_nc_gid=0rPV0DmCTnLshKpmXzmcQg&oh=00_AfgoL7ti2MH8sKjz5Oye9n1hFDsEfLTL7sC4HKAbV01hvA&oe=691744DA"
+              src={thumb}
               alt="Equipment Rentals"
               className="w-full object-cover"
             />

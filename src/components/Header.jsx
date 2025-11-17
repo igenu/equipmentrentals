@@ -1,7 +1,7 @@
 import { useAuth } from "../utils/idb.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import { LogOut, CircleUserRound, Bell, Mail, PhoneCall } from "lucide-react";
+import { LogOut, CircleUserRound, Bell, Mail, PhoneCall, SearchIcon } from "lucide-react";
 // import { AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -34,50 +34,50 @@ export default function Header() {
 
     return (
         <header className="">
-            <div className="max-w-7xl mx-auto md:px-4 px-2 md:py-8 py-2">
-                <div className="bg-gray-800 md:py-3 py-3 md:px-6 px-3 text-white rounded-t-2xl">
+            <div className="max-w-[1200px] mx-auto md:px-4 px-4 md:pt-3 pt-3">
+                <div className="bg-gray-800 md:py-3 py-3 md:px-4 px-3 text-white rounded-t-xl">
                     <div className="flex  justify-between gap-4 text-[13px]">
-                        <div className="flex flex-row md:flex-row md:items-center md:gap-4 gap-2">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-2">
                             <a href="mailto:info@equipmentrentalsindia.com" className="flex items-center md:gap-2 gap-1">
-                                <Mail className="text-orange-500 w-3 md:w-5" />
-                                <span class="text-[11px]">info@equipmentrentalsindia.com</span>
+                                <Mail className="text-orange-500 w-3 md:w-3" />
+                                <span class="text-[10px]">info@equipmentrentalsindia.com</span>
                             </a>
                             <div className="flex flex-row md:flex-row md:items-center md:gap-4 gap-2">
                                 <a href="tel:+91-11-46562783" className="flex items-center md:gap-2 gap-1">
-                                    <PhoneCall className="text-orange-500 w-3 md:w-5" />
-                                    <span class="text-[11px]">+91-11-46562783</span>
+                                    <PhoneCall className="text-orange-500 w-3 md:w-3" />
+                                    <span class="text-[10px]">+91-11-46562783</span>
                                 </a>
                                 <a href="tel:+91-9311494448" className="flex items-center md:gap-2 gap-1">
-                                    <PhoneCall className="text-orange-500 w-3 md:w-5" />
-                                    <span class="text-[11px]">+91-9311494448</span>
+                                    <PhoneCall className="text-orange-500 w-3 md:w-3" />
+                                    <span class="text-[10px]">+91-9311494448</span>
                                 </a>
                             </div>
                         </div>
-                        <div className=" gap-3 items-center hidden md:flex">
+                        <div className=" gap-4 items-center hidden md:flex">
 
-                            <a href="/equipmentform" className="hidden md:block bg-orange-500 text-white font-medium px-4 py-1 rounded-lg hover:bg-orange-600 transition">
+                            <a href="/equipmentform" className="hidden md:block bg-orange-400 text-white font-medium px-3 py-1 rounded hover:bg-orange-500 transition md:text-[11px]">
                                 Post Equipment for Free
                             </a>
-                            <a href="/LoginPage" className="">
+                            <a href="/LoginPage" className="md:text-[11px] hover:text-orange-400">
                                 login
                             </a>
                             /
-                            <a href="/RegisterPage" className="">
+                            <a href="/RegisterPage" className="md:text-[11px] hover:text-orange-400">
                                 Register
                             </a>
                         </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-[41px_21px_51px_-59px_rgba(0,0,0,0.03)] z-50 flex-1 md:py-3 py-3 md:px-6 px-3 flex justify-between gap-4 items-center rounded-b-2xl">
+                <div className="bg-white shadow-[41px_21px_51px_-59px_rgba(0,0,0,0.03)] z-50 flex-1 md:py-3 py-3 md:px-4 px-3 flex justify-between gap-4 items-center rounded-b-xl">
 
                     <div className="flex items-center gap-2">
                         <a href="/" className="">
-                            <img src={logo} alt="logo" className="md:h-18 h-12" />
+                            <img src={logo} alt="logo" className="md:h-10 h-12" />
                         </a>
                     </div>
 
 
-                    <nav className="hidden md:flex items-center gap-8">
+                    <nav className="hidden md:flex items-center gap-6 md:text-[12px]">
                         <NavLink
                             to="/"
                             onClick={() => setIsOpen(false)}
@@ -161,6 +161,10 @@ export default function Header() {
                         >
                             Contact Us
                         </NavLink>
+
+                        <a href="" className="bg-orange-400 hover:bg-orange-500 py-0.5 px-2 rounded">
+                            <SearchIcon className="w-3 text-white font-bold" />
+                        </a>
                     </nav>
 
 
@@ -291,8 +295,33 @@ export default function Header() {
                         >
                             Contact Us
                         </NavLink>
-                        <a href="/LoginPage" className="hover:text-orange-500">login</a>
-                        <a href="/LoginPage" className="hover:text-orange-500">Register</a>
+                        
+                        <NavLink
+                            to="/LoginPage"
+                            onClick={()=>{
+                                setMenuOpen(false)
+                            }}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            login
+                        </NavLink>
+                        <NavLink
+                            to="/RegisterPage"
+                            onClick={()=>{
+                                setMenuOpen(false)
+                            }}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-orange-500 font-medium"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }
+                        >
+                            Register
+                        </NavLink>
                         <a href="/equipmentform" className="bg-orange-500 text-white font-medium px-4 py-2 rounded-lg hover:bg-orange-600 transition">
                             Post Equipment for Free
                         </a>

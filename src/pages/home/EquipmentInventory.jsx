@@ -124,7 +124,7 @@ export default function EquipmentInventory() {
       </div>
 
       
-      <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
+      <div className="max-w-[1200px] mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
         <div className="grid md:grid-cols-3 gap-0">
           
           <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">

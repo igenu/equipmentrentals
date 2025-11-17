@@ -4,7 +4,7 @@ import aboutImg from "../../assets/about-equipments.jpg"; // replace with your a
 const AboutERI = () => {
   return (
     <section className="md:py-16 py-10">
-      <div className="max-w-7xl mx-auto  px-4">
+      <div className="max-w-[1200px] mx-auto  px-4">
         <div className=" overflow-hidden flex flex-col md:flex-row gap-10">
           
           <div className="md:w-1/2">

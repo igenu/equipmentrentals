@@ -35,7 +35,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white">
       
-      <div className="max-w-7xl mx-auto px-4 md:py-16 py-8">
+      <div className="max-w-[1200px] mx-auto px-4 md:py-16 py-8">
         <div className="grid lg:grid-cols-12 gap-8">
           
           <div className="lg:col-span-4">
@@ -149,7 +149,7 @@ export default function Footer() {
 
       
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="max-w-[1200px] mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center md:gap-4 gap-6 text-sm text-gray-400">
             <p>© 2025 Equipment Rentals India. All rights reserved.</p>
             <div className="flex gap-6 text-[12px] md:text-[14px]">

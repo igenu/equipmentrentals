@@ -49,7 +49,7 @@ export default function ERIPlatform() {
         }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4">
+      <div className="relative max-w-[1200px] mx-auto px-4">
         
         <div className="text-center mb-16">
           <div className="inline-block mb-7">

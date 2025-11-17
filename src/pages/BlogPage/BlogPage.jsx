@@ -57,7 +57,7 @@ export default function BlogPage() {
 
   return (
     <section className="bg-gray-100 ">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 pb-8 px-4">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 pb-8 px-4">
         
         <div className="lg:col-span-2 space-y-8">
           {posts.map((post) => (

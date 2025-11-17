@@ -28,7 +28,7 @@ const WhatWeOffer = () => {
 
   return (
     <section className="bg-gray-50 md:py-20 py-10">
-      <div className="max-w-7xl mx-auto  px-4">
+      <div className="max-w-[1200px] mx-auto  px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-end">
           
           <div className="col-span-1">

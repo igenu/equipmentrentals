@@ -3,7 +3,7 @@ import React from "react";
 export default function EquipmentInfo() {
   return (
     <section className="bg-gray-50 md:py-12 py-8 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         
         <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-bold text-gray-900 leading-snug">

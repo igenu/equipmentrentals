@@ -11,7 +11,7 @@ const ERIAssistBanner = () => {
       <div className="absolute inset-0 bg-black/60"></div>
 
       
-      <div className="relative z-10 max-w-3xl text-center bg-white/20 backdrop-blur-md p-10 rounded-3xl shadow-lg">
+      <div className="relative z-10 max-w-3xl text-center bg-white/20 backdrop-blur-md p-10 rounded-3xl shadow-lg mx-4">
         <h2 className="text-yellow-400 text-2xl sm:text-3xl font-semibold mb-3">
           Machines available for Rent or Sale? – Use{" "}
           <span className="font-bold italic text-yellow-500">ERIAssist</span> for Seamless Deployment and Sale!

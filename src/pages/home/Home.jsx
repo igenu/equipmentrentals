@@ -6,6 +6,7 @@ import EquipmentInventory from './EquipmentInventory'
 import MarketSection from './MarketSection'
 import ERIPlatform from './ERIPlatform'
 import EquipmentInfo from './EquipmentInfo'
+import Categories from './Categories'
 
 
 
@@ -14,6 +15,7 @@ function Home() {
     <div>
         <Hero />
         <MarketSection />
+        {/* <Categories /> */}
         <SpareParts />
         <Equipment />
         <EquipmentInventory />

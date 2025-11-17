@@ -7,7 +7,7 @@ const LoginPage = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col">
       
       <div className="bg-gray-800 text-white py-6">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4">
           <h1 className="text-3xl font-semibold">Log In</h1>
           <nav className="mt-2 text-sm">
             <a href="/" className="text-white/70 hover:text-white">

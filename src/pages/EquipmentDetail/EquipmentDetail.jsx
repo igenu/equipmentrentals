@@ -5,7 +5,7 @@ const EquipmentDetail = () => {
     <div className=" min-h-screen">
       {/* Header */}
       <div className="bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto flex justify-between items-center  py-4 px-4">
+        <div className="max-w-[1200px] mx-auto flex justify-between items-center  py-4 px-4">
           <h1 className="text-xl font-semibold">Hamm-311</h1>
           <nav className="text-sm">
             <a href="/" className="hover:text-orange-400">Home</a>
@@ -16,7 +16,7 @@ const EquipmentDetail = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto py-10 px-4 grid lg:grid-cols-3 gap-8">
+      <div className="max-w-[1200px] mx-auto py-10 px-4 grid lg:grid-cols-3 gap-8">
         
         {/* Left: Image Section */}
         <div className="lg:col-span-1">
@@ -82,7 +82,7 @@ const EquipmentDetail = () => {
       </div>
 
       {/* Related Equipments */}
-      <div className="max-w-7xl mx-auto py-10 px-4">
+      <div className="max-w-[1200px] mx-auto py-10 px-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
           Related Equipments
         </h2>

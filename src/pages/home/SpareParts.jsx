@@ -35,7 +35,7 @@ export default function SpareParts() {
         <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-orange-500/20 rounded-full blur-xl animate-pulse"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10 px-4">
+      <div className="max-w-[1200px] mx-auto relative z-10 px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           <div className="text-white space-y-6">
