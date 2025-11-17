@@ -1,11 +1,12 @@
 import { useAuth } from "../utils/idb.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import { LogOut, CircleUserRound, Bell, Mail, PhoneCall, SearchIcon } from "lucide-react";
+import { LogOut, CircleUserRound, Bell, Mail, PhoneCall, SearchIcon, XIcon } from "lucide-react";
 // import { AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { Search } from "lucide-react";
 
 
 export default function Header() {
@@ -29,6 +30,8 @@ export default function Header() {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
+     const [open, setOpen] = useState(false);
 
 
 
@@ -162,9 +165,12 @@ export default function Header() {
                             Contact Us
                         </NavLink>
 
-                        <a href="" className="bg-orange-400 hover:bg-orange-500 py-0.5 px-2 rounded">
-                            <SearchIcon className="w-3 text-white font-bold" />
-                        </a>
+                        <button
+                            onClick={() => setOpen(true)}
+                            className="bg-orange-400 hover:bg-orange-500 py-1 px-2 rounded"
+                        >
+                            <Search className="w-4 text-white" />
+                        </button>
                     </nav>
 
 
@@ -331,6 +337,32 @@ export default function Header() {
 
 
             </div>
+             {/* Offcanvas */}
+      <div
+        className={`
+          fixed left-0 w-full bg-white shadow-lg z-50
+          transition-transform duration-300 h-screen
+          ${open ? "block top-0" : "hidden "}
+        `}
+      >
+        <div className="p-5 flex items-center gap-3 border-b max-w-[1200px] mx-auto px-4">
+          <input
+            type="text"
+            placeholder="Search here..."
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            className="px-3 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+          >
+            Search
+          </button>
+
+          {/* Close Button */}
+          <button onClick={() => setOpen(false)} className="py-2 bg-red-600 hover:bg-red-700 rounded-lg px-3 text-white">
+            <XIcon className="w-4" />
+          </button>
+        </div>
+      </div>
         </header>
     );
 }

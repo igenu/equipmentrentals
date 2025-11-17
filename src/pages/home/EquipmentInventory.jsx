@@ -190,12 +190,12 @@ export default function EquipmentInventory() {
 
       
       <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12 max-w-2xl mx-auto">
-        <button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
-          <Search size={20} className="group-hover:scale-110 transition-transform" />
+        <button className="text-[13px]  bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
+          <Search size={12} className="group-hover:scale-110 transition-transform" />
           Search Equipment
         </button>
-        <button className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
-          <FileText size={20} className="group-hover:scale-110 transition-transform" />
+        <button className="text-[13px]  bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
+          <FileText size={12} className="group-hover:scale-110 transition-transform" />
           List Equipment
         </button>
       </div>

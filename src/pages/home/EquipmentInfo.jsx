@@ -29,7 +29,7 @@ export default function EquipmentInfo() {
               className="w-full object-cover"
               poster="https://www.equipmentrentalsindia.com/public/img/video-poster.png"
             >
-              <source src="/videos/demo.mp4" type="video/mp4" />
+              <source src="https://www.equipmentrentalsindia.com/public/img/videoplayback.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
