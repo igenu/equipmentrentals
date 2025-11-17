@@ -40,7 +40,7 @@ export default function Header() {
             <div className="max-w-[1200px] mx-auto md:px-4 px-4 md:pt-5 pt-3">
                 <div className="bg-gray-800 md:py-3 py-3 md:px-4 px-3 text-white rounded-t-xl">
                     <div className="flex  justify-between gap-4 text-[13px]">
-                        <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-2">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-1">
                             <a href="mailto:info@equipmentrentalsindia.com" className="flex items-center md:gap-2 gap-1">
                                 <Mail className="text-orange-500 w-3 md:w-3" />
                                 <span class="text-[10px]">info@equipmentrentalsindia.com</span>
@@ -196,14 +196,14 @@ export default function Header() {
                     className={`z-99 fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform transition-transform ${menuOpen ? "translate-x-0" : "translate-x-full"
                         }`}
                 >
-                    <div className="flex items-center justify-between px-4 py-3 border-b">
-                        <h2 className="text-lg font-semibold">Menu</h2>
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-gray-400">
+                        <h2 className="text-[14px] font-semibold">Menu</h2>
                         <button onClick={() => setMenuOpen(false)}>
-                            <X size={24} />
+                            <X size={20} />
                         </button>
                     </div>
 
-                    <nav className="flex flex-col p-4 space-y-3">
+                    <nav className="flex flex-col items-start p-4 space-y-3 text-[12px]">
                         <NavLink
                             to="/"
                             onClick={()=>{
@@ -328,7 +328,7 @@ export default function Header() {
                         >
                             Register
                         </NavLink>
-                        <a href="/equipmentform" className="bg-orange-500 text-white font-medium px-4 py-2 rounded-lg hover:bg-orange-600 transition">
+                        <a href="/equipmentform" className="inline-block bg-orange-500 text-white font-medium px-3 py-1.5 rounded hover:bg-orange-600 transition text-[11px]">
                             Post Equipment for Free
                         </a>
                     </nav>

@@ -14,6 +14,24 @@ const data = {
       price: "₹45L"
     },
     {
+      id: 1,
+      title: "Bauer BG28 Piling Rig",
+      desc: "Bauer BG28 Piling Rig",
+      img: thumb,
+      tag: "Hot deal",
+      views: "1.2K",
+      price: "₹45L"
+    },
+    {
+      id: 2,
+      title: "Excavator",
+      desc: "TATA EX-200 SUPER is available for sale!",
+      img: thumb,
+      tag: "Verified",
+      views: "890",
+      price: "₹32L"
+    },
+    {
       id: 2,
       title: "Excavator",
       desc: "TATA EX-200 SUPER is available for sale!",

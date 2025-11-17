@@ -14,19 +14,19 @@ export default function Hero() {
             Welcome to Equipment Rentals India
           </p>
 
-          <h1 className="md:text-[18px] text-[20px]  font-extrabold text-[#1E1E1E] leading-tight">
+          <h1 className="md:text-[18px] text-[16px]  font-extrabold text-[#1E1E1E] leading-tight">
             Rent • Buy • Sell • Finance • Spare Parts for Construction, Mining and Industrial Equipment{" "}
             
           </h1>
 
-          <p className="text-gray-600 md:mb-6  md:text-[13px] text-[14px]">
+          <p className="text-gray-600 md:mb-6  text-[13px]">
             Equipment Rentals India is India’s leading marketplace to rent, buy, sell, finance and source spare parts for heavy construction equipment. Our database is updated daily with the latest machines and parts available nationwide.
           </p>
 
-          <a href='/equipmentform' className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex md:text-[12px] text-[14px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
+          <a href='/equipmentform' className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex text-[12px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
             Post Equipment Requirement <ArrowRight className='w-3'/>
           </a>
-          <a href='/equipmentform' className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex md:text-[12px] text-[14px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
+          <a href='/equipmentform' className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex text-[12px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
             View Equipment Requirement <ArrowRight className='w-3'/>
           </a>
 
