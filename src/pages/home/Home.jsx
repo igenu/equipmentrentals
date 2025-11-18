@@ -16,7 +16,7 @@ function Home() {
     <div>
         <Hero />
         <Equipment />
-        <MarqueeCards />
+        {/* <MarqueeCards /> */}
         <ERIPlatform />
         <MarketSection />
         <Categories />
