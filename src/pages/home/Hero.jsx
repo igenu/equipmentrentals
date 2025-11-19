@@ -66,12 +66,12 @@ export default function Hero() {
               className="md:max-w-[88%] max-w-[70%] -mt-21 mr-2 h-auto drop-shadow-xl"
             /> */}
             
-            <div className="absolute bottom-3 right-4 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-xl px-4 py-3 text-center">
+            {/* <div className="absolute bottom-3 right-4 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-xl px-4 py-3 text-center">
               <p className="text-lg font-bold text-gray-800">2.7k</p>
               <p className="text-[10px] font-semibold text-gray-600 uppercase">
                 Happy Client
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 

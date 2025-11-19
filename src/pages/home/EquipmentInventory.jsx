@@ -132,10 +132,10 @@ export default function EquipmentInventory() {
             <h3 className="text-xl font-bold mb-4 text-gray-900">
               {currentData.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-3 text-[13px]">
+            <p className="text-gray-600  mb-3 text-[13px]">
               {currentData.description}
             </p>
-            <p className="text-gray-600 leading-relaxed mb-5 text-[13px]">
+            <p className="text-gray-600  mb-5 text-[13px]">
               {currentData.locations}
             </p>
             <div className="flex flex-wrap gap-2">
