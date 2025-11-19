@@ -1,5 +1,7 @@
 import React from 'react'
 import { ArrowRight, ArrowRightFromLine, ArrowRightIcon, ArrowRightSquare, Play } from "lucide-react";
+import banimage from "../../assets/equipment-ban.png";
+import banimage2 from "../../assets/equipment-ban3.png";
 import machine from "../../assets/machine.png";
 import videoThumb from "../../assets/video-thumb.jpg"; 
 
@@ -8,8 +10,9 @@ export default function Hero() {
     <section className="">
       <div className="max-w-[1200px] mx-auto px-4 ">
         
-        <div className='grid md:grid-cols-8 md:gap-6 gap-4 mt-8 mb-4  bg-white py-4 px-4 rounded-lg'>
-        <div className="col-span-3 md:space-y-4 space-y-4">
+        <div className='rounded-lg bg-contain bg-[url(https://kfkit.rometheme.pro/built/wp-content/uploads/sites/73/2023/11/industrial-motor-grader-and-backhoe-excavator-on-h-2021-08-26-15-28-01-utc.jpg)] '>
+        <div className='grid md:grid-cols-8 md:gap-6 gap-4 mt-8 mb-4  bg-white/91 py-4 px-4 rounded-lg'>
+        <div className="col-span-4 md:space-y-4 space-y-4">
           <p className="uppercase text-sm font-semibold text-gray-700 tracking-wider">
             Welcome to Equipment Rentals India
           </p>
@@ -25,7 +28,7 @@ export default function Hero() {
 
           <a href='/equipmentform' className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex text-[12px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
             Post Equipment Requirement <ArrowRight className='w-3'/>
-          </a>
+          </a> <br />
           <a href='/equipmentform' className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex text-[12px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
             View Equipment Requirement <ArrowRight className='w-3'/>
           </a>
@@ -61,17 +64,20 @@ export default function Hero() {
         </div>
 
         
-        <div className="col-span-3 bg-orange-400 rounded-2xl">
-          <div className=" relative p-4 md:p-8 flex justify-center items-center">
-            <img
-              src={machine}
+        <div className="col-span-2 bg-orange-100 rounded-2xl h-full">
+          <div
+  className="relative p-4 md:p-8 flex justify-center items-center h-full bg-cover bg-center bg-no-repeat rounded-xl"
+  style={{ backgroundImage: `url(${banimage2})` }}
+>
+            {/* <img
+              src={banimage2}
               alt="machine"
-              className="md:max-w-[110%] max-w-[70%] h-auto drop-shadow-xl"
-            />
+              className="md:max-w-[88%] max-w-[70%] -mt-21 mr-2 h-auto drop-shadow-xl"
+            /> */}
             
-            <div className="absolute bottom-3 right-4 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl px-6 py-4 text-center">
-              <p className="text-2xl font-bold text-gray-800">2.7k</p>
-              <p className="text-xs font-semibold text-gray-600 uppercase">
+            <div className="absolute bottom-3 right-4 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-xl px-4 py-3 text-center">
+              <p className="text-lg font-bold text-gray-800">2.7k</p>
+              <p className="text-[10px] font-semibold text-gray-600 uppercase">
                 Happy Client
               </p>
             </div>
@@ -79,7 +85,7 @@ export default function Hero() {
         </div>
 
         
-        <div className="md:col-span-2 col-span-3 space-y-6 bg-gray-100 p-4 rounded-md">
+        <div className="md:col-span-2 col-span-3 space-y-6 bg-gray-300 p-4 rounded-md">
           
 
           {/* <div className="bg-gray-100">
@@ -103,22 +109,22 @@ export default function Hero() {
               SUBMIT YOUR REQUIREMENTS
             </h3>
 
-            <select className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none">
-              <option> I have equipment which I want to </option>
-              <option> Sell </option>
-              <option> Rent Out </option>
-              <option> I am ok for sell or renting out </option>
+            <select className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none text-gray-400">
+              <option>I have equipment which I want to </option>
+              <option>Sell </option>
+              <option>Rent Out </option>
+              <option>I am ok for sell or renting out </option>
             </select>
-            <select className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none">
-              <option> I need equipment for  </option>
-              <option> Rent </option>
-              <option> I want to purchase used equipment </option>
-              <option> I am ok for rent or purchase </option>
+            <select className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none text-gray-400">
+              <option>I need equipment for  </option>
+              <option>Rent </option>
+              <option>I want to purchase used equipment </option>
+              <option>I am ok for rent or purchase </option>
             </select>
-            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none" placeholder='Full Name' />
-            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none" placeholder='Email ID' />
-            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none" placeholder='Phone No' />
-            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none" placeholder='Current location of equipment' />
+            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none text-gray-400" placeholder='Full Name' />
+            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none text-gray-400" placeholder='Email ID' />
+            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none text-gray-400" placeholder='Phone No' />
+            <input className="bg-white text-[11px] w-full mb-3 rounded border border-gray-200 px-2 py-2 focus:outline-none text-gray-400" placeholder='Current location of equipment' />
             
             
 
@@ -126,6 +132,7 @@ export default function Hero() {
               Next
             </button>
           </div>
+        </div>
         </div>
         </div>
         
