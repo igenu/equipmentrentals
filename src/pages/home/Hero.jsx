@@ -34,33 +34,24 @@ export default function Hero() {
           </a>
 
           
-          <div className="flex items-center gap-3 md:pt-5 py-2">
-            <div className="flex -space-x-3">
-              <img
-                src="https://randomuser.me/api/portraits/women/32.jpg"
-                alt=""
-                className="w-10 h-10 rounded-full border-2 border-white"
-              />
-              <img
-                src="https://randomuser.me/api/portraits/men/40.jpg"
-                alt=""
-                className="w-10 h-10 rounded-full border-2 border-white"
-              />
-              <img
-                src="https://randomuser.me/api/portraits/men/28.jpg"
-                alt=""
-                className="w-10 h-10 rounded-full border-2 border-white"
-              />
+          <div className=" mt-4">
+            
+
+            <div className="grid grid-cols-3 gap-4 text-center">
+                <div className='bg-white/80 rounded-lg p-3 md:p-3 text-gray-900 shadow-2xl'>
+                    <div className="text-[16px] font-bold text-blue-600">1000+</div>
+                    <div className="text-xs text-gray-600">Listings</div>
+                </div>
+                <div className='bg-white/80 rounded-lg p-3 md:p-3 text-gray-900 shadow-2xl'>
+                    <div className="text-[16px] font-bold text-blue-600">All India</div>
+                    <div className="text-xs text-gray-600">Coverage</div>
+                </div>
+                <div className='bg-white/80 rounded-lg p-3 md:p-3 text-gray-900 shadow-2xl'>
+                    <div className="text-[16px] font-bold text-blue-600">24/7</div>
+                    <div className="text-xs text-gray-600">Support</div>
+                </div>
+                </div>
             </div>
-            <div>
-              <div className="flex items-center gap-1 text-orange-500">
-                ★★★★★
-              </div>
-              <p className="text-gray-500 text-[12px]">
-                Trusted by <span className="font-semibold">2k+ Clients</span>
-              </p>
-            </div>
-          </div>
         </div>
 
         
