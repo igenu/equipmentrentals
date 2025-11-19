@@ -60,7 +60,7 @@ export default function MarketSection() {
                         <ul className="divide-y divide-gray-100">
                             {buyData.map((item, idx) => (
                                 <li key={idx} className="flex justify-between items-center p-4 hover:bg-gray-50">
-                                    <p className="md:text-[12px] text-sm text-gray-700">{item.title}</p>
+                                    <p className="text-[12px] text-gray-700">{item.title}</p>
                                     <span
                                         className={`text-[10px] whitespace-nowrap font-medium px-3 py-1 rounded-full ${item.status === "Closed"
                                             ? "bg-green-100 text-green-700"
@@ -88,7 +88,7 @@ export default function MarketSection() {
                         <ul className="divide-y divide-gray-100">
                             {rentData.map((item, idx) => (
                                 <li key={idx} className="flex justify-between items-center p-4 hover:bg-gray-50">
-                                    <p className="md:text-[12px] text-sm text-gray-700">{item.title}</p>
+                                    <p className="text-[12px] text-gray-700">{item.title}</p>
                                     <span
                                         className={`text-[10px] whitespace-nowrap font-medium px-3 py-1 rounded-full ${item.status === "Closed"
                                             ? "bg-green-100 text-green-700"

@@ -152,9 +152,9 @@ export default function Footer() {
       
       <div className="border-t border-gray-800">
         <div className="max-w-[1200px] mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center md:gap-4 gap-6 text-[13px] text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center md:gap-4 gap-6 md:text-[13px] text-[11px] text-gray-400">
             <p>© 2025 Equipment Rentals India. All rights reserved.</p>
-            <div className="flex gap-6 text-[12px] md:text-[13px]">
+            <div className="flex gap-6 text-[10px] md:text-[13px]">
               <a href="#" className="hover:text-orange-500 transition-colors">Sitemap</a>
               <a href="/BlogPage" className="hover:text-orange-500 transition-colors">View the Latest Blog</a>
               <a href="#" className="hover:text-orange-500 transition-colors">Job Opportunities</a>
