@@ -47,17 +47,17 @@ export default function ProjectSlider() {
   const next = () => setActive((i) => (i < data.length - 1 ? i + 1 : i));
 
   return (
-    <section className="w-full bg-gray-700">
-      <div className=" max-w-[1200px] mx-auto px-5 pt-16 pb-8 ">
+    <section className="w-full bg-gray-100">
+      <div className=" max-w-[1200px] mx-auto px-4 py-6 ">
       {/* HEADER */}
-      <div className="flex justify-between items-end gap-6 mb-10 ">
-        <h2 className="text-xl md:text-2xl text-white">All Categories</h2>
+      <div className="flex justify-between items-end gap-6 mb-8 ">
+        <h2 className="text-xl md:text-xl text-black font-bold">All Categories</h2>
 
         <div className="flex gap-2">
           <button
             disabled={active === 0}
             onClick={prev}
-            className="w-10 h-10 rounded-full bg-white/20 disabled:opacity-30 flex items-center justify-center hover:bg-orange-500 transition"
+            className="w-10 h-10 rounded-full bg-orange-400/60 disabled:opacity-30 flex items-center justify-center hover:bg-orange-500 transition"
           >
             ‹
           </button>
@@ -65,7 +65,7 @@ export default function ProjectSlider() {
           <button
             disabled={active === data.length - 1}
             onClick={next}
-            className="w-10 h-10 rounded-full bg-white/20 disabled:opacity-30 flex items-center justify-center hover:bg-orange-500 transition"
+            className="w-10 h-10 rounded-full bg-orange-400/60 disabled:opacity-30 flex items-center justify-center hover:bg-orange-500 transition"
           >
             ›
           </button>
@@ -84,7 +84,7 @@ export default function ProjectSlider() {
                 onMouseEnter={() => setActive(i)}
                 className={`
                   relative rounded-xl overflow-hidden cursor-pointer transition-all duration-500
-                  h-[26rem] bg-white
+                  h-[26rem] bg-gray-700
                   ${
                     isActive
                       ? "basis-[38rem] -translate-y-1 shadow-2xl"
@@ -132,7 +132,7 @@ export default function ProjectSlider() {
                     <div className="flex flex-col gap-3 items-start">
                       <img
                         src={item.thumb}
-                        className="w-full h-64 bg-white rounded-md object-cover shadow-lg"
+                        className="w-90% h-64 bg-orange-400/80 rounded-md object-cover shadow-lg"
                       />
                       <p className="text-gray-300 max-w-sm text-[0.95rem]">
                         {item.desc}

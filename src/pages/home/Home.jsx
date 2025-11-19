@@ -16,11 +16,11 @@ function Home() {
     <div>
         <Hero />
         <Equipment />
-        {/* <MarqueeCards /> */}
-        <ERIPlatform />
-        <MarketSection />
-        <Categories />
         <SpareParts />
+        {/* <MarqueeCards /> */}
+        <Categories />
+        <MarketSection />
+        <ERIPlatform />
         <EquipmentInventory />
         <EquipmentInfo />
     </div>
