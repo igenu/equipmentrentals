@@ -114,7 +114,7 @@ export default function EquipmentTrends() {
             <TrendingUp size={14} />
             <span>LIVE MARKETPLACE</span>
           </div>
-          <h1 className="text-3xl md:text-xl font-black text-gray-900 mb-3">
+          <h1 className="text-lh md:text-xl font-black text-gray-900 mb-3">
             Equipment <span className="text-orange-500">Marketplace</span>
           </h1>
           <p className="text-gray-600 text-[14px] max-w-2xl mx-auto">

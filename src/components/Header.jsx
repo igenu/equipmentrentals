@@ -43,16 +43,16 @@ export default function Header() {
                         <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-1">
                             <a href="mailto:info@equipmentrentalsindia.com" className="flex items-center md:gap-2 gap-1">
                                 <Mail className="text-orange-500 w-3 md:w-3" />
-                                <span class="text-[10px]">info@equipmentrentalsindia.com</span>
+                                <span className="text-[10px]">info@equipmentrentalsindia.com</span>
                             </a>
                             <div className="flex flex-row md:flex-row md:items-center md:gap-4 gap-2">
                                 <a href="tel:+91-11-46562783" className="flex items-center md:gap-2 gap-1">
                                     <PhoneCall className="text-orange-500 w-3 md:w-3" />
-                                    <span class="text-[10px]">+91-11-46562783</span>
+                                    <span className="text-[10px]">+91-11-46562783</span>
                                 </a>
                                 <a href="tel:+91-9311494448" className="flex items-center md:gap-2 gap-1">
                                     <PhoneCall className="text-orange-500 w-3 md:w-3" />
-                                    <span class="text-[10px]">+91-9311494448</span>
+                                    <span className="text-[10px]">+91-9311494448</span>
                                 </a>
                             </div>
                         </div>

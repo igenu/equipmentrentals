@@ -104,24 +104,7 @@ export default function ERIPlatform() {
                 ))}
               </div>
             </div>
-            <div className="bg-white rounded-lg p-4 md:p-6 text-gray-900 shadow-2xl mt-8">
             
-
-            <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                    <div className="text-xl font-bold text-blue-600">1000+</div>
-                    <div className="text-xs text-gray-600">Listings</div>
-                </div>
-                <div>
-                    <div className="text-xl font-bold text-blue-600">All India</div>
-                    <div className="text-xs text-gray-600">Coverage</div>
-                </div>
-                <div>
-                    <div className="text-xl font-bold text-blue-600">24/7</div>
-                    <div className="text-xs text-gray-600">Support</div>
-                </div>
-                </div>
-            </div>
           </div>
 
           

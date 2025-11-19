@@ -22,7 +22,7 @@ function Home() {
         <MarketSection />
         <ERIPlatform />
         <EquipmentInventory />
-        <EquipmentInfo />
+        {/* <EquipmentInfo /> */}
     </div>
   )
 }
