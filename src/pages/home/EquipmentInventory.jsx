@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ChevronRight, Search, FileText } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion"; // <-- IMPORTED
 import thumb from "../../assets/video-thumb.jpg";
+
 const tabs = ["Cranes", "Earthmoving", "Road", "Concreting", "Plant", "Miscellaneous"];
 
 const equipmentData = {
@@ -85,15 +87,52 @@ const equipmentData = {
   },
 };
 
+// Variants for scroll-in animation
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      when: "beforeChildren",
+      staggerChildren: 0.1
+    }
+  }
+};
+
+// Variants for individual elements (like buttons)
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
+};
+
+// Variants for tab content transition
+const contentVariants = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.2 } }
+};
+
+
 export default function EquipmentInventory() {
   const [activeTab, setActiveTab] = useState("Cranes");
   const currentData = equipmentData[activeTab];
 
   return (
-    <section className="bg-gray-100 py-8 px-4">
-      
-      <div className="text-center mb-8 max-w-3xl mx-auto">
-        <h2 className="text-xl  font-bold text-gray-900 mb-3">
+    <motion.section
+      className="bg-gray-100 py-8 px-4"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
+
+      <motion.div
+        className="text-center mb-8 max-w-3xl mx-auto"
+        variants={itemVariants}
+      >
+        <h2 className="text-xl  font-bold text-gray-900 mb-3">
           India's Largest Construction
           <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent ml-2">
             Featured Category
@@ -102,103 +141,132 @@ export default function EquipmentInventory() {
         <p className="text-gray-600 text-[14px]">
           Connect with trusted suppliers across major cities
         </p>
-      </div>
+      </motion.div>
 
-      
-      <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-4xl mx-auto">
+
+      <motion.div
+        className="flex flex-wrap justify-center gap-2 mb-8 max-w-4xl mx-auto"
+        variants={sectionVariants} // Reuse section variants for staggered tab buttons
+      >
         {tabs.map((tab) => (
-          <button
+          <motion.button
             key={tab}
+            variants={itemVariants}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 font-semibold rounded-full transition-all duration-300 text-[14px] ${
-              activeTab === tab
+            className={`px-4 py-2 font-semibold rounded-full transition-all duration-300 text-[14px] ${activeTab === tab
                 ? "bg-orange-500 text-white shadow-lg shadow-orange-500/30 scale-105"
                 : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 hover:border-orange-300"
-            }`}
+              }`}
           >
             {tab}
-          </button>
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
 
-      
-      <div className="max-w-[1200px] mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
-        <div className="grid md:grid-cols-3 gap-0">
-          
-          <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">
-            <div className="inline-block px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-4 self-start">
-              Featured Category
+
+      <motion.div
+        className="max-w-[1200px] mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden"
+        variants={itemVariants}
+        transition={{ duration: 0.6, delay: 0.2 }} // Delay for the main content block
+      >
+        {/* ANIMATEPRESENCE ensures the content fades out and the new content fades in */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab} // Key changes on tab switch, triggering animation
+            variants={contentVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="grid md:grid-cols-3 gap-0"
+          >
+
+            {/* Column 1: Text Content */}
+            <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">
+              <div className="inline-block px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-4 self-start">
+                Featured Category
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">
+                {currentData.title}
+              </h3>
+              <p className="text-gray-600  mb-3 text-[13px]">
+                {currentData.description}
+              </p>
+              <p className="text-gray-600  mb-5 text-[13px]">
+                {currentData.locations}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">
+                  ✓ Verified Suppliers
+                </span>
+                <span className="px-3 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">
+                  ✓ Best Prices
+                </span>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-gray-900">
-              {currentData.title}
-            </h3>
-            <p className="text-gray-600  mb-3 text-[13px]">
-              {currentData.description}
-            </p>
-            <p className="text-gray-600  mb-5 text-[13px]">
-              {currentData.locations}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">
-                ✓ Verified Suppliers
-              </span>
-              <span className="px-3 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">
-                ✓ Best Prices
-              </span>
+
+
+            {/* Column 2: Image */}
+            <div className="relative overflow-hidden">
+              <img
+                src={currentData.image}
+                alt={activeTab}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
-          </div>
 
-          
-          <div className="relative overflow-hidden">
-            <img 
-              src={currentData.image}
-              alt={activeTab}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-          </div>
 
-          
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-10 text-white">
-            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center text-[12px]">
-                {currentData.list.length}
-              </span>
-              {activeTab} Available
-            </h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 mb-6">
-              <ul className="space-y-2">
-                {currentData.list.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-3 hover:bg-white/10 p-2 rounded-lg transition-colors cursor-pointer group"
-                  >
-                    <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform"></div>
-                    <span className="text-white/90 group-hover:text-white font-medium text-[13px]">{item}</span>
-                    <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" size={16} />
-                  </li>
-                ))}
-              </ul>
+            {/* Column 3: List */}
+            <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-10 text-white">
+              <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+                <span className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center text-[12px]">
+                  {currentData.list.length}
+                </span>
+                {activeTab} Available
+              </h3>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 mb-6">
+                <ul className="space-y-2">
+                  {currentData.list.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-3 hover:bg-white/10 p-2 rounded-lg transition-colors cursor-pointer group"
+                    >
+                      <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform"></div>
+                      <span className="text-white/90 group-hover:text-white font-medium text-[13px]">{item}</span>
+                      <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" size={16} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="bg-white m-auto text-[12px] text-orange-600 hover:bg-gray-50 font-bold py-2 px-4 rounded-xl transition-all hover:shadow-lg flex items-center justify-center gap-2 group">
+                View All Equipment
+                <ChevronRight className="group-hover:translate-x-1 transition-transform" size={13} />
+              </button>
             </div>
-            <button className="bg-white m-auto text-[12px] text-orange-600 hover:bg-gray-50 font-bold py-2 px-4 rounded-xl transition-all hover:shadow-lg flex items-center justify-center gap-2 group">
-              View All Equipment
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" size={13} />
-            </button>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
 
-      
-      <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12 max-w-2xl mx-auto">
-        <button className="text-[13px]  bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
+
+      <motion.div
+        className="flex flex-col sm:flex-row justify-center gap-4 mt-12 max-w-2xl mx-auto"
+        variants={sectionVariants}
+      >
+        <motion.button
+          className="text-[13px] bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group"
+          variants={itemVariants}
+        >
           <Search size={12} className="group-hover:scale-110 transition-transform" />
           Search Equipment
-        </button>
-        <button className="text-[13px]  bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group">
+        </motion.button>
+        <motion.button
+          className="text-[13px] bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-3 group"
+          variants={itemVariants}
+        >
           <FileText size={12} className="group-hover:scale-110 transition-transform" />
           List Equipment
-        </button>
-      </div>
-    </section>
+        </motion.button>
+      </motion.div>
+    </motion.section>
   );
 }

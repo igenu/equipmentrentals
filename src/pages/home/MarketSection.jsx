@@ -1,5 +1,6 @@
 import React from "react";
 import { Search, Newspaper, CalendarDays, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion"; // <-- IMPORTED
 
 export default function MarketSection() {
     const buyData = [
@@ -34,20 +35,53 @@ export default function MarketSection() {
         },
     ];
 
+    // Animation variants for the main content area (Two columns)
+    const contentVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    };
+
+    // Animation variants for the News Sidebar (Slide in from right)
+    const newsVariants = {
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.2 } }
+    };
+
+    // Staggered animation for the list items
+    const listItemVariants = {
+        hidden: { opacity: 0, x: -10 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.3 } }
+    };
+
     return (
         <section className=" pb-8 pt-8">
-            <div className="text-left md:mb-8 mb-6 max-w-[1200px] mx-auto px-4">
+            {/* HEADER ANIMATION (Slide up the header text) */}
+            <motion.div
+                className="text-left md:mb-8 mb-6 max-w-[1200px] mx-auto px-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+            >
                 <h2 className="text-xl font-bold text-gray-900 mb-2">India's Largest Construction <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">Equipment Inventory</span></h2>
-                
+
                 <p className="text-gray-600 md:text-[14px]">Connect with trusted suppliers across major cities</p>
-            </div>
+            </motion.div>
+
             <div className="max-w-[1200px] mx-auto grid lg:grid-cols-3 gap-8 px-4">
-                
-                <div className="lg:col-span-2 space-y-6">
-                    
-                    <div className="bg-white shadow rounded-lg overflow-hidden">
+
+                {/* LEFT SIDE: Buy/Rent Lists (Slide up) */}
+                <motion.div
+                    className="lg:col-span-2 space-y-6"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={contentVariants}
+                >
+
+                    {/* BUY SECTION */}
+                    <div className="bg-white shadow rounded-lg overflow-hidden border border-gray-100">
                         <div className="flex md:flex-row flex-col md:items-center justify-between bg-gray-900 text-white md:px-4 px-4 py-3 md:gap-0 gap-3">
-                            <h3 className="text-[14px] font-semibold">Want to <span className="text-orange-400">Sell</span> Your Equipment?</h3>
+                            <h3 className="text-[14px] font-semibold">Want to <span className="text-orange-400">Buy</span> Your Equipment?</h3>
                             <div className="relative">
                                 <Search className="absolute left-3 top-2.5 text-gray-400" size={14} />
                                 <input
@@ -57,9 +91,19 @@ export default function MarketSection() {
                                 />
                             </div>
                         </div>
-                        <ul className="divide-y divide-gray-100">
+                        {/* Staggered animation wrapper for list items */}
+                        <motion.ul
+                            className="divide-y divide-gray-100"
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ staggerChildren: 0.08 }} // Stagger children for smooth list entry
+                        >
                             {buyData.map((item, idx) => (
-                                <li key={idx} className="flex justify-between items-center p-4 hover:bg-gray-50">
+                                <motion.li
+                                    key={idx}
+                                    className="flex justify-between items-center p-4 hover:bg-gray-50"
+                                    variants={listItemVariants}
+                                >
                                     <p className="text-[12px] text-gray-700">{item.title}</p>
                                     <span
                                         className={`text-[10px] whitespace-nowrap font-medium px-3 py-1 rounded-full ${item.status === "Closed"
@@ -69,11 +113,13 @@ export default function MarketSection() {
                                     >
                                         {item.status}
                                     </span>
-                                </li>
+                                </motion.li>
                             ))}
-                        </ul>
+                        </motion.ul>
                     </div>
-                    <div className="bg-white shadow rounded-lg overflow-hidden">
+
+                    {/* RENT SECTION */}
+                    <div className="bg-white shadow rounded-lg overflow-hidden border border-gray-100">
                         <div className="flex md:flex-row flex-col md:items-center justify-between bg-gray-900 text-white md:px-4 px-4 py-3 md:gap-0 gap-3">
                             <h3 className="text-[14px] font-semibold">Want to <span className="text-orange-400">Rent</span> Your Equipment?</h3>
                             <div className="relative">
@@ -81,13 +127,23 @@ export default function MarketSection() {
                                 <input
                                     type="text"
                                     placeholder="Search equipment..."
-                                    className="pl-9 pr-3 py-2 rounded bg-orange-400 text-white text-[12px] placeholder-white/100 border border-orange-200 focus:outline-none focus:ring-2 focus:ring-white/80"
+                                    className="pl-9 pr-3 py-2 rounded bg-orange-400 text-white text-[12px] placeholder-white/80 border border-orange-200 focus:outline-none focus:ring-2 focus:ring-white/80"
                                 />
                             </div>
                         </div>
-                        <ul className="divide-y divide-gray-100">
+                        {/* Staggered animation wrapper for list items */}
+                        <motion.ul
+                            className="divide-y divide-gray-100"
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ staggerChildren: 0.08 }} // Stagger children for smooth list entry
+                        >
                             {rentData.map((item, idx) => (
-                                <li key={idx} className="flex justify-between items-center p-4 hover:bg-gray-50">
+                                <motion.li
+                                    key={idx}
+                                    className="flex justify-between items-center p-4 hover:bg-gray-50"
+                                    variants={listItemVariants}
+                                >
                                     <p className="text-[12px] text-gray-700">{item.title}</p>
                                     <span
                                         className={`text-[10px] whitespace-nowrap font-medium px-3 py-1 rounded-full ${item.status === "Closed"
@@ -97,42 +153,55 @@ export default function MarketSection() {
                                     >
                                         {item.status}
                                     </span>
-                                </li>
+                                </motion.li>
                             ))}
-                        </ul>
+                        </motion.ul>
                     </div>
 
-                    
-                   
-                </div>
+                </motion.div>
 
-                
-                <div className="bg-white shadow rounded-lg md:p-4 p-3 flex flex-col justify-between">
+
+                {/* RIGHT SIDE: News Section (Slide in from right) */}
+                <motion.div
+                    className="bg-white shadow rounded-lg md:p-4 p-3 flex flex-col justify-between border border-gray-100"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={newsVariants}
+                >
 
                     <div className="space-y-5">
                         <div className="flex items-center gap-2 mb-4">
                             <Newspaper className="text-orange-500" size={18} />
                             <h3 className="text-[16px] font-bold text-gray-800">Latest News</h3>
                         </div>
-                        {news.map((n, i) => (
-                            <div
-                                key={i}
-                                className="border-l-4 border-orange-400 pl-4 bg-gray-100 hover:bg-orange-50 p-3 rounded-md transition"
-                            >
-                                <a href="" className="font-semibold text-gray-800 text-[12px] leading-snug mb-3 block">{n.title}</a>
-                                <div className="flex items-center text-gray-500 text-[10px] gap-1">
-                                    <CalendarDays size={10} />
-                                    <span>{n.date}</span>
-                                </div>
-                            </div>
-                        ))}
+                        {/* Staggered animation wrapper for news items */}
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ staggerChildren: 0.1 }}
+                        >
+                            {news.map((n, i) => (
+                                <motion.div
+                                    key={i}
+                                    className="border-l-4 border-orange-400 pl-4 bg-gray-100 hover:bg-orange-50 p-3 rounded-md transition mb-3"
+                                    variants={listItemVariants} // Use same list item variant for consistency
+                                >
+                                    <a href="" className="font-semibold text-gray-800 text-[12px] leading-snug mb-3 block">{n.title}</a>
+                                    <div className="flex items-center text-gray-500 text-[10px] gap-1">
+                                        <CalendarDays size={10} />
+                                        <span>{n.date}</span>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
                     </div>
                     <div className="text-right mt-6">
-                        <button className="bg-orange-400 text-white font-semibold md:px-4 px-2 md:py-1 py-1 inline-flex md:text-[12px] text-[14px] rounded-md hover:bg-orange-500 transition flex gap-2 items-center">
-                            View All <ArrowRight size={10} />
+                        <button className="bg-orange-500 text-white font-semibold md:px-4 px-3 md:py-2 py-2 inline-flex md:text-[12px] text-[14px] rounded-full hover:bg-orange-600 transition flex gap-2 items-center">
+                            View All News <ArrowRight size={12} />
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

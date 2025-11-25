@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShoppingCart, Wrench, TrendingUp, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion'; // <-- IMPORTED
 
 export default function ERIPlatform() {
   const features = [
@@ -40,56 +41,120 @@ export default function ERIPlatform() {
     'Easy registration and listing process'
   ];
 
+  // ------------------------------------------------------------------
+  // FRAMER MOTION VARIANTS
+  // ------------------------------------------------------------------
+
+  // Variant for the main grid container to stagger its children
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // Delay between feature cards
+        delayChildren: 0.2 // Delay before the first card starts
+      }
+    }
+  };
+
+  // Variant for individual feature cards (slide up)
+  const cardVariants = {
+    hidden: { y: 50, opacity: 0, scale: 0.8 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        duration: 0.5
+      }
+    }
+  };
+
+  // Variant for individual benefit list items (slide in from left)
+  const benefitItemVariants = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "tween",
+        duration: 0.2
+      }
+    }
+  };
+
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 overflow-hidden mt-8">
-      
+
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="white" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+          // backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="white" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
         }}></div>
       </div>
 
       <div className="relative max-w-[1200px] mx-auto px-4">
-        
-        <div className="text-center mb-10">
+
+        {/* HEADER ANIMATION */}
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className="inline-block mb-7">
             <span className="bg-blue-500/20 border border-blue-400/30 text-blue-200 px-4 py-2 rounded-full text-[12px] font-semibold">
               India's Leading Construction Equipment Aggregator
             </span>
           </div>
           <h1 className="text-lg md:text-lg lg:text-xl font-bold mb-6">
-            Buy, Sell, Hire Used and New  
+            Buy, Sell, Hire Used and New
             <span className="ml-2 mt-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-               Construction Equipment Online
+              Construction Equipment Online
             </span>
           </h1>
-          <p className="text-gray-300  leading-relaxed text-[13px]">
+          <p className="text-gray-300  leading-relaxed text-[13px]">
             Equipment Rentals India (ERI) offers a comprehensive platform to buy, sell, and rent heavy construction machinery. Our online portal boasts an extensive and regularly updated database, ensuring that contractors across the nation can easily access equipment available for sale or rent at various locations throughout India.
           </p>
-        </div>
+        </motion.div>
 
-        
+
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          
-          <div>
+
+          {/* LEFT COLUMN: Features and Categories (Slide Up/Stagger) */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-lg font-bold mb-6 text-blue-300">What We Offer</h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            {/* FEATURE CARDS GRID (Staggered Animation) */}
+            <motion.div
+              className="grid sm:grid-cols-2 gap-6"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div
+                  <motion.div
                     key={index}
-                    className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105"
+                    className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-[1.02] cursor-pointer"
+                    variants={cardVariants}
                   >
                     <div className={`w-8 h-8 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                       <Icon className="w-4 h-4 text-white" />
                     </div>
                     <h3 className="text-[15px] font-bold mb-2">{feature.title}</h3>
                     <p className="text-[13px] text-gray-300">{feature.description}</p>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
 
             <div className="mt-8 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <h3 className="text-lg font-bold mb-3 text-blue-300">Equipment Categories</h3>
@@ -104,11 +169,18 @@ export default function ERIPlatform() {
                 ))}
               </div>
             </div>
-            
-          </div>
 
-          
-          <div className="bg-white rounded-lg p-8 md:p-6 text-gray-900 shadow-2xl">
+          </motion.div>
+
+
+          {/* RIGHT COLUMN: Benefits and CTA (Slide Up/Stagger) */}
+          <motion.div
+            className="bg-white rounded-lg p-8 md:p-6 text-gray-900 shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.4 }} // Slight delay for right column
+          >
             <h2 className="text-xl font-bold mb-4 text-gray-900">
               Why Choose ERI?
             </h2>
@@ -116,14 +188,25 @@ export default function ERIPlatform() {
               We recognize the vital role that road construction equipment plays in the development and maintenance of robust infrastructure. Our platform provides a seamless and transparent process for all your construction equipment needs.
             </p>
 
-            <div className="space-y-3 mb-8">
+            {/* BENEFITS LIST (Staggered Animation) */}
+            <motion.div
+              className="space-y-3 mb-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-3"
+                  variants={benefitItemVariants} // Slide-in animation for each benefit
+                >
                   <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 text-[13px]">{benefit}</span>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 mb-8">
               <h3 className="font-bold text-gray-900 mb-2">For Sellers</h3>
@@ -137,7 +220,7 @@ export default function ERIPlatform() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-[12px] text-white px-4 py-2 rounded-lg font-bold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg">
+              <button className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-[12px] text-white px-4 py-2 rounded-lg font-bold transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg">
                 Get Started
                 <ArrowRight className="w-3 h-3" />
               </button>
@@ -146,8 +229,8 @@ export default function ERIPlatform() {
               </button>
             </div>
 
-            
-          </div>
+
+          </motion.div>
         </div>
       </div>
     </div>
