@@ -49,7 +49,7 @@ export default function ProjectSlider() {
   return (
     <section className="w-full bg-gray-100">
       <div className=" max-w-[1200px] mx-auto px-4 py-6 ">
-      {/* HEADER */}
+      
       <div className="flex justify-between items-end gap-6 mb-8 ">
         <h2 className="text-xl md:text-xl text-black font-bold">All Categories</h2>
 
@@ -72,7 +72,7 @@ export default function ProjectSlider() {
         </div>
       </div>
 
-      {/* SLIDER */}
+      
       <div className="max-w-[1400px] mx-auto overflow-hidden">
         <div className="flex gap-6">
           {data.map((item, i) => {
@@ -92,7 +92,7 @@ export default function ProjectSlider() {
                   }
                 `}
               >
-                {/* Background */}
+                
                 <img
                   src={item.bg}
                   className={`
@@ -101,7 +101,7 @@ export default function ProjectSlider() {
                   `}
                 />
 
-                {/* CONTENT */}
+                
                 <div
                   className={`
                     absolute inset-0 flex items-center justify-center gap-3 p-4 bg-gradient-to-b from-transparent to-black/80
@@ -113,26 +113,26 @@ export default function ProjectSlider() {
                     }
                   `}
                 >
-                  {/* TITLE */}
+                  
                   <h3
                     className={`
                       font-bold text-white transition-all 
                       ${
                         isActive
                           ? "text-3xl rotate-0 hidden"
-                          : "text-xl writing-mode-vertical-rl rotate-270 whitespace-nowrap"
+                          : "text-lg writing-mode-vertical-rl rotate-270 whitespace-nowrap"
                       }
                     `}
                   >
                     {item.title}
                   </h3>
 
-                  {/* EXTRA CONTENT (only when active) */}
+                  
                   {isActive && (
                     <div className="flex flex-col gap-3 items-start">
                       <img
                         src={item.thumb}
-                        className="w-90% h-64 bg-orange-400/80 rounded-md object-cover shadow-lg"
+                        className="w-90% h-54 bg-orange-400/80 rounded-md object-cover shadow-lg"
                       />
                       <p className="text-gray-300 max-w-sm text-[0.95rem]">
                         {item.desc}

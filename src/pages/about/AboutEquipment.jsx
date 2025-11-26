@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion"; // Import motion and useInView
+import { motion, useInView } from "framer-motion"; 
 import aboutImg from "../../assets/about-equipments.jpg";
 import puneetImg from "../../assets/Puneet.png";
 
-// Animation Variants for general fade-up effect
+
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -22,11 +22,11 @@ const AboutERI = () => {
   ];
   const [progressBars, setProgressBars] = useState(initialBars);
 
-  // Ref for the progress bar section to trigger the animation
+  
   const barRef = useRef(null);
-  const isBarsInView = useInView(barRef, { once: true, amount: 0.5 }); // Trigger when 50% visible, only once
+  const isBarsInView = useInView(barRef, { once: true, amount: 0.5 }); 
 
-  // Progress Bar Animation Logic
+  
   useEffect(() => {
     if (isBarsInView) {
       const timer = setInterval(() => {
@@ -36,11 +36,11 @@ const AboutERI = () => {
             value: bar.value < bar.target ? bar.value + 1 : bar.target,
           }))
         );
-      }, 20); // Speed of the count
+      }, 20); 
 
       return () => clearInterval(timer);
     } else {
-      // Reset values when scrolled out (optional, for re-runs)
+      
       setProgressBars(initialBars.map(bar => ({ ...bar, value: 0 })));
     }
   }, [isBarsInView]);
@@ -61,7 +61,7 @@ const AboutERI = () => {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }} // Trigger when 30% visible
+            viewport={{ once: true, amount: 0.3 }} 
             transition={{ duration: 0.8 }}
           >
             
@@ -172,7 +172,7 @@ const AboutERI = () => {
             <div className="flex gap-6 mt-8 ">
               {/* Progress Bars (Section triggered by ref) */}
               <motion.div
-                ref={barRef} // Attach ref here
+                ref={barRef} 
                 className="space-y-4 bg-white p-4 rounded-lg shadow-lg w-full"
                 variants={itemVariants}
                 initial="hidden"
@@ -202,11 +202,11 @@ const AboutERI = () => {
               
               {/* Vision & Mission Cards (Animations added) */}
               <motion.div
-                className="flex flex-col  gap-6" // Use sm:flex-row for horizontal layout on small screens and up
+                className="flex flex-col  gap-6" 
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ staggerChildren: 0.1, delay: 0.5 }} // Staggered children animation
+                transition={{ staggerChildren: 0.1, delay: 0.5 }} 
               >
                 {/* Vision Card */}
                 <motion.div

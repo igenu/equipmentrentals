@@ -47,7 +47,7 @@ export default function SpareParts() {
   return (
     <section className="relative md:py-10 py-10 px-4 overflow-hidden bg-gray-900">
 
-      {/* Background Animations - Keep the existing CSS animations */}
+      
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-4 border-orange-500 rounded-full animate-pulse"></div>
         <div className="absolute top-40 right-20 w-24 h-24 border-4 border-orange-400 rounded-lg rotate-45 animate-spin" style={{ animationDuration: '10s' }}></div>
@@ -58,7 +58,7 @@ export default function SpareParts() {
       <div className="max-w-[1200px] mx-auto relative z-10 px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT SIDE: Content Block (Slide-in from left on scroll) */}
+          
           <motion.div
             className="text-white space-y-6"
             initial="hidden"
@@ -72,7 +72,7 @@ export default function SpareParts() {
               </span>
             </div>
 
-            <h2 className="text-xl md:text-3xl font-bold leading-tight"> {/* Increased text size for better visual weight */}
+            <h2 className="text-xl md:text-3xl font-bold leading-tight"> 
               SPARE{" "}
               <span className="text-orange-500 relative">
                 PARTS
@@ -97,8 +97,8 @@ export default function SpareParts() {
           </motion.div>
 
 
-          {/* RIGHT SIDE: Features Grid (Staggered fade-up on scroll) */}
-          <div className="grid grid-cols-2 gap-6"> {/* Increased gap for cleaner look */}
+          
+          <div className="grid grid-cols-2 gap-6"> 
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -112,10 +112,10 @@ export default function SpareParts() {
                 <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-white font-bold text-[16px] mb-2"> {/* Increased text size */}
+                <h3 className="text-white font-bold text-[16px] mb-2"> 
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 text-[14px]"> {/* Increased text size */}
+                <p className="text-gray-400 text-[14px]"> 
                   {feature.description}
                 </p>
               </motion.div>
@@ -124,7 +124,7 @@ export default function SpareParts() {
         </div>
 
 
-        {/* STATS BAR (Slide-up from bottom on scroll) */}
+        
         <motion.div
           className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6"
           initial="hidden"
@@ -132,19 +132,19 @@ export default function SpareParts() {
           viewport={{ once: true, amount: 0.5 }} // Trigger when 50% visible, only once
           variants={statsVariants}
         >
-          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
-            <div className="text-2xl font-bold text-orange-500 mb-1">10K+</div> {/* Increased text size */}
+          <div className="text-center p-4 py-7 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+            <div className="text-2xl font-bold text-orange-500 mb-1">10K+</div> 
             <div className="text-gray-400 text-[13px]">Parts Available</div>
           </div>
-          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+          <div className="text-center p-4 py-7 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
             <div className="text-2xl font-bold text-orange-500 mb-1">24/7</div>
             <div className="text-gray-400 text-[13px]">Support</div>
           </div>
-          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+          <div className="text-center p-4 py-7 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
             <div className="text-2xl font-bold text-orange-500 mb-1">48h</div>
             <div className="text-gray-400 text-[13px]">Delivery Time</div>
           </div>
-          <div className="text-center p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
+          <div className="text-center p-4 py-7 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700">
             <div className="text-2xl font-bold text-orange-500 mb-1">100%</div>
             <div className="text-gray-400 text-[13px]">Genuine Parts</div>
           </div>

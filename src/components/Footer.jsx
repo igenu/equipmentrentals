@@ -79,7 +79,7 @@ export default function Footer() {
             <div className="max-w-[1200px] mx-auto px-4 md:py-16 py-8">
                 <div className="grid lg:grid-cols-12 gap-8">
 
-                    {/* Column 1: Categories (Scroll-In) */}
+                    
                     <motion.div
                         className="lg:col-span-4"
                         variants={columnVariants}
@@ -107,7 +107,7 @@ export default function Footer() {
                                         />
                                     </button>
 
-                                    {/* Accordion Content with framer-motion (kept) */}
+                                    
                                     <AnimatePresence initial={false}>
                                         {openCategory === index && (
                                             <motion.div
@@ -133,7 +133,7 @@ export default function Footer() {
                     </motion.div>
 
 
-                    {/* Column 2: CTA (Scroll-In + Continuous Pulse) */}
+                    
                     <motion.div
                         className="lg:col-span-4 flex flex-col justify-center items-center text-center bg-gradient-to-br from-orange-500/10 to-orange-600/5 rounded-2xl p-8 border border-orange-500/20"
                         variants={columnVariants}
@@ -142,7 +142,7 @@ export default function Footer() {
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        {/* Pulsing Icon */}
+                        
                         <motion.div
                             className="w-15 h-15 bg-orange-500 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-orange-500/50"
                             variants={pulseVariant}
@@ -162,7 +162,7 @@ export default function Footer() {
                     </motion.div>
 
 
-                    {/* Column 3: Contact/Social (Scroll-In + Hover Effects) */}
+                    
                     <motion.div
                         className="lg:col-span-4 space-y-6"
                         variants={columnVariants}
@@ -194,11 +194,11 @@ export default function Footer() {
                         </div>
 
 
-                        {/* Enhanced Get In Touch Section */}
+                        
                         <div className="bg-gray-800/50 rounded-lg p-4 space-y-4">
                             <h4 className="font-bold text-[14px] mb-4">Get In Touch</h4>
 
-                            {/* Contact Links with Hover Animation */}
+                            
                             {[
                                 { icon: Phone, text: "+91-9311494448" },
                                 { icon: Phone, text: "+91-11-46562783" },
@@ -218,7 +218,7 @@ export default function Footer() {
                         </div>
 
 
-                        {/* Social Icons with Hover Animation */}
+                        
                         <div className="flex gap-3">
                             {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
                                 <motion.a

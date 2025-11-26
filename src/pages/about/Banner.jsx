@@ -20,10 +20,10 @@ export default function AboutHeader() {
   };
 
   return (
-    // Outer section still controls the overall width/centering and horizontal padding
+    
     <section className="max-w-[1200px] mx-auto px-4 mt-10">
       
-      {/* Inner container: Now uses a dark gradient and white/light text */}
+      
       <motion.div 
         className="relative z-10 flex flex-col justify-center items-center overflow-hidden py-8 
                    bg-gradient-to-br from-gray-900 via-gray-950 to-orange-900/50 

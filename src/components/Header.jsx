@@ -100,22 +100,22 @@ export default function Header() {
         <header className="">
             <div className="max-w-[1200px] mx-auto md:px-4 px-4 md:pt-5 pt-3">
 
-                {/* === TOP BAR (No Animation Needed Here) === */}
+                
                 <div className="bg-gray-800 md:py-3 py-3 md:px-4 px-3 text-white rounded-t-xl">
                     <div className="flex justify-between gap-4 text-[13px]">
                         <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-1">
                             <a href="mailto:info@equipmentrentalsindia.com" className="flex items-center md:gap-2 gap-1">
                                 <Mail className="text-orange-500 w-3 md:w-3" />
-                                <span className="text-[10px]">info@equipmentrentalsindia.com</span>
+                                <span className="text-[12px]">info@equipmentrentalsindia.com</span>
                             </a>
                             <div className="flex flex-row md:flex-row md:items-center md:gap-4 gap-2">
                                 <a href="tel:+91-11-46562783" className="flex items-center md:gap-2 gap-1">
                                     <PhoneCall className="text-orange-500 w-3 md:w-3" />
-                                    <span className="text-[10px]">+91-11-46562783</span>
+                                    <span className="text-[12px]">+91-11-46562783</span>
                                 </a>
                                 <a href="tel:+91-9311494448" className="flex items-center md:gap-2 gap-1">
                                     <PhoneCall className="text-orange-500 w-3 md:w-3" />
-                                    <span className="text-[10px]">+91-9311494448</span>
+                                    <span className="text-[12px]">+91-9311494448</span>
                                 </a>
                             </div>
                         </div>
@@ -123,12 +123,12 @@ export default function Header() {
                             <a href="/equipmentform" className="hidden md:block bg-orange-400 text-white font-medium px-3 py-1 rounded hover:bg-orange-500 transition md:text-[11px]">
                                 Post Equipment for Free
                             </a>
-                            {/* Conditional Login/Register/User Icon */}
+                            
                             {!user ? (
                                 <>
-                                    <a href="/LoginPage" className="md:text-[11px] hover:text-orange-400">login</a>
+                                    <a href="/LoginPage" className="md:text-[12px] hover:text-orange-400">login</a>
                                     /
-                                    <a href="/RegisterPage" className="md:text-[11px] hover:text-orange-400">Register</a>
+                                    <a href="/RegisterPage" className="md:text-[12px] hover:text-orange-400">Register</a>
                                 </>
                             ) : (
                                 <div className="relative" ref={dropdownRef}>
@@ -170,22 +170,22 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* === MAIN NAV BAR (Page Load Animation Applied) === */}
+                
                 <motion.div
                     className="bg-white shadow-[41px_21px_51px_-59px_rgba(0,0,0,0.03)] z-50 flex-1 md:py-3 py-3 md:px-4 px-3 flex justify-between gap-4 items-center rounded-b-xl"
                     variants={headerContainerVariants}
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Logo */}
+                    
                     <motion.div variants={headerItemVariants} className="flex items-center gap-2">
                         <a href="/" className="">
                             <img src={logo} alt="logo" className="md:h-10 h-12" />
                         </a>
                     </motion.div>
 
-                    {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-6 md:text-[12px]">
+                    
+                    <nav className="hidden md:flex items-center gap-6 md:text-[13px]">
                         {[
                             { to: "/", label: "Home" },
                             { to: "/about", label: "About Us" },
@@ -206,7 +206,7 @@ export default function Header() {
                             </motion.div>
                         ))}
 
-                        {/* Search Button (Utility Hover Animation) */}
+                        
                         <motion.button
                             onClick={() => setOpen(true)}
                             className="bg-orange-400 hover:bg-orange-500 py-1 px-2 rounded"
@@ -218,7 +218,7 @@ export default function Header() {
                         </motion.button>
                     </nav>
 
-                    {/* Mobile Menu Button (Utility Hover Animation) */}
+                    
                     <motion.button
                         className="md:hidden text-gray-700"
                         onClick={() => setMenuOpen(true)}
@@ -229,11 +229,11 @@ export default function Header() {
                     </motion.button>
                 </motion.div>
 
-                {/* === MOBILE MENU (Off-canvas) with framer-motion (KEPT) === */}
+                
                 <AnimatePresence>
                     {menuOpen && (
                         <>
-                            {/* Backdrop */}
+                            
                             <motion.div
                                 className="fixed inset-0 bg-black/70 bg-opacity-40 z-50"
                                 initial="hidden"
@@ -243,7 +243,7 @@ export default function Header() {
                                 onClick={() => setMenuOpen(false)}
                             />
 
-                            {/* Sliding Menu Panel */}
+                            
                             <motion.div
                                 className="z-[99] fixed top-0 right-0 w-64 h-full bg-white shadow-lg"
                                 initial="closed"
@@ -259,7 +259,7 @@ export default function Header() {
                                 </div>
 
                                 <nav className="flex flex-col items-start p-4 space-y-3 text-[12px]">
-                                    {/* Mobile NavLinks */}
+                                    
                                     <NavLink to="/" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? "text-orange-500 font-medium" : "text-gray-700 hover:text-orange-500"}>Home</NavLink>
                                     <NavLink to="/about" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? "text-orange-500 font-medium" : "text-gray-700 hover:text-orange-500"}>About Us</NavLink>
                                     <NavLink to="/browseequipment" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? "text-orange-500 font-medium" : "text-gray-700 hover:text-orange-500"}>Browse Equipment List</NavLink>
@@ -278,32 +278,34 @@ export default function Header() {
                     )}
                 </AnimatePresence>
 
-                {/* === SEARCH OVERLAY (Offcanvas) with framer-motion (KEPT) === */}
+                
                 <AnimatePresence>
                     {open && (
                         <motion.div
-                            className={`fixed left-0 w-full bg-white shadow-lg z-[99] h-screen`}
+                            className={`fixed inset-0 w-full bg-gray-900/90 z-[99] h-full`}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
                             variants={searchOverlayVariants}
                         >
-                            <div className="p-5 flex items-center gap-3 border-b max-w-[1200px] mx-auto px-4">
-                                <input
-                                    type="text"
-                                    placeholder="Search here..."
-                                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                />
-                                <button
-                                    className="px-3 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
-                                >
-                                    Search
-                                </button>
+                            <div className="py-5 max-w-[1200px] mx-auto px-4">
+                                <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+                                    <input
+                                        type="text"
+                                        placeholder="Search here..."
+                                        className="w-full px-4 py-2 border border-gray-400 placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                    />
+                                    <button
+                                        className="px-3 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+                                    >
+                                        Search
+                                    </button>
 
-                                {/* Close Button */}
-                                <button onClick={() => setOpen(false)} className="py-2 bg-red-600 hover:bg-red-700 rounded-lg px-3 text-white">
-                                    <XIcon className="w-4" />
-                                </button>
+                                    
+                                    <button onClick={() => setOpen(false)} className="py-2 bg-red-600 hover:bg-red-700 rounded-lg px-3 text-white">
+                                        <XIcon className="w-4" />
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
                     )}

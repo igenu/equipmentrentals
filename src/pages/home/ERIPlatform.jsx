@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCart, Wrench, TrendingUp, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion'; // <-- IMPORTED
+import { motion } from 'framer-motion'; 
 
 export default function ERIPlatform() {
   const features = [
@@ -41,23 +41,23 @@ export default function ERIPlatform() {
     'Easy registration and listing process'
   ];
 
-  // ------------------------------------------------------------------
-  // FRAMER MOTION VARIANTS
-  // ------------------------------------------------------------------
+  
+  
+  
 
-  // Variant for the main grid container to stagger its children
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // Delay between feature cards
-        delayChildren: 0.2 // Delay before the first card starts
+        staggerChildren: 0.15, 
+        delayChildren: 0.2 
       }
     }
   };
 
-  // Variant for individual feature cards (slide up)
+  
   const cardVariants = {
     hidden: { y: 50, opacity: 0, scale: 0.8 },
     visible: {
@@ -72,7 +72,7 @@ export default function ERIPlatform() {
     }
   };
 
-  // Variant for individual benefit list items (slide in from left)
+  
   const benefitItemVariants = {
     hidden: { x: -20, opacity: 0 },
     visible: {
@@ -90,13 +90,13 @@ export default function ERIPlatform() {
 
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          // backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="white" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+          
         }}></div>
       </div>
 
       <div className="relative max-w-[1200px] mx-auto px-4">
 
-        {/* HEADER ANIMATION */}
+        
         <motion.div
           className="text-center mb-10"
           initial={{ opacity: 0, y: 20 }}
@@ -122,7 +122,7 @@ export default function ERIPlatform() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
 
-          {/* LEFT COLUMN: Features and Categories (Slide Up/Stagger) */}
+          
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function ERIPlatform() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-lg font-bold mb-6 text-blue-300">What We Offer</h2>
-            {/* FEATURE CARDS GRID (Staggered Animation) */}
+            
             <motion.div
               className="grid sm:grid-cols-2 gap-6"
               variants={containerVariants}
@@ -173,13 +173,13 @@ export default function ERIPlatform() {
           </motion.div>
 
 
-          {/* RIGHT COLUMN: Benefits and CTA (Slide Up/Stagger) */}
+          
           <motion.div
             className="bg-white rounded-lg p-8 md:p-6 text-gray-900 shadow-2xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: 0.4 }} // Slight delay for right column
+            transition={{ duration: 0.6, delay: 0.4 }} 
           >
             <h2 className="text-xl font-bold mb-4 text-gray-900">
               Why Choose ERI?
@@ -188,7 +188,7 @@ export default function ERIPlatform() {
               We recognize the vital role that road construction equipment plays in the development and maintenance of robust infrastructure. Our platform provides a seamless and transparent process for all your construction equipment needs.
             </p>
 
-            {/* BENEFITS LIST (Staggered Animation) */}
+            
             <motion.div
               className="space-y-3 mb-8"
               variants={containerVariants}
@@ -200,7 +200,7 @@ export default function ERIPlatform() {
                 <motion.div
                   key={index}
                   className="flex items-start gap-3"
-                  variants={benefitItemVariants} // Slide-in animation for each benefit
+                  variants={benefitItemVariants} 
                 >
                   <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 text-[13px]">{benefit}</span>

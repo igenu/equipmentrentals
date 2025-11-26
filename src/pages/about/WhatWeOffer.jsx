@@ -56,13 +56,13 @@ const WhatWeOffer = () => {
 
   return (
     <section className=" pt-2 pb-10 relative">
-      {/* Decorative Elements (kept) */}
+      
       <div className="absolute top-20 right-10 w-72 h-72 bg-orange-100 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-30"></div>
 
       <div className="max-w-[1200px] mx-auto px-4 relative z-10">
         
-        {/* Header Section (Fade In Animation) */}
+        
         <motion.div 
             className="text-center max-w-3xl mx-auto mb-12"
             variants={itemVariants}
@@ -91,24 +91,24 @@ const WhatWeOffer = () => {
           </p>
         </motion.div>
 
-        {/* Services Grid (Staggered Animation) */}
+        
         <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }} // Start animation when 10% visible
+            viewport={{ once: true, amount: 0.1 }} 
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
-              variants={itemVariants} // Each card uses the fade-up item variant
+              variants={itemVariants} 
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
               className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-200"
             >
               <div className="p-8">
-                {/* Icon & Title */}
+                
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`p-3 rounded-xl transition-all duration-300 ${
                     hoveredCard === index 
@@ -124,12 +124,12 @@ const WhatWeOffer = () => {
                   </div>
                 </div>
 
-                {/* Description */}
+                
                 <p className="text-[13px] text-gray-600 leading-relaxed mb-5">
                   {service.desc}
                 </p>
 
-                {/* Features List */}
+                
                 <div className="space-y-2 mb-5">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2">
@@ -139,14 +139,14 @@ const WhatWeOffer = () => {
                   ))}
                 </div>
 
-                {/* CTA Button */}
+                
                 <button className="text-[13px] text-orange-500 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                   Learn More 
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
 
-              {/* Animated Border Bottom */}
+              
               <div className={`h-1 bg-gradient-to-r from-orange-400 to-orange-600 transition-all duration-300 ${
                 hoveredCard === index ? 'w-full' : 'w-0'
               }`}></div>
@@ -154,7 +154,7 @@ const WhatWeOffer = () => {
           ))}
         </motion.div>
 
-        {/* CTA Section (Fade In Animation) */}
+        
         <motion.div 
             className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 md:p-10 shadow-xl text-center"
             variants={itemVariants}

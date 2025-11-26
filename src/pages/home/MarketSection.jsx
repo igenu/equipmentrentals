@@ -55,7 +55,7 @@ export default function MarketSection() {
 
     return (
         <section className=" pb-8 pt-8">
-            {/* HEADER ANIMATION (Slide up the header text) */}
+            
             <motion.div
                 className="text-left md:mb-8 mb-6 max-w-[1200px] mx-auto px-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function MarketSection() {
 
             <div className="max-w-[1200px] mx-auto grid lg:grid-cols-3 gap-8 px-4">
 
-                {/* LEFT SIDE: Buy/Rent Lists (Slide up) */}
+                
                 <motion.div
                     className="lg:col-span-2 space-y-6"
                     initial="hidden"
@@ -78,7 +78,7 @@ export default function MarketSection() {
                     variants={contentVariants}
                 >
 
-                    {/* BUY SECTION */}
+                    
                     <div className="bg-white shadow rounded-lg overflow-hidden border border-gray-100">
                         <div className="flex md:flex-row flex-col md:items-center justify-between bg-gray-900 text-white md:px-4 px-4 py-3 md:gap-0 gap-3">
                             <h3 className="text-[14px] font-semibold">Want to <span className="text-orange-400">Buy</span> Your Equipment?</h3>
@@ -91,7 +91,7 @@ export default function MarketSection() {
                                 />
                             </div>
                         </div>
-                        {/* Staggered animation wrapper for list items */}
+                        
                         <motion.ul
                             className="divide-y divide-gray-100"
                             initial="hidden"
@@ -118,7 +118,7 @@ export default function MarketSection() {
                         </motion.ul>
                     </div>
 
-                    {/* RENT SECTION */}
+                    
                     <div className="bg-white shadow rounded-lg overflow-hidden border border-gray-100">
                         <div className="flex md:flex-row flex-col md:items-center justify-between bg-gray-900 text-white md:px-4 px-4 py-3 md:gap-0 gap-3">
                             <h3 className="text-[14px] font-semibold">Want to <span className="text-orange-400">Rent</span> Your Equipment?</h3>
@@ -131,7 +131,7 @@ export default function MarketSection() {
                                 />
                             </div>
                         </div>
-                        {/* Staggered animation wrapper for list items */}
+                        
                         <motion.ul
                             className="divide-y divide-gray-100"
                             initial="hidden"
@@ -161,7 +161,7 @@ export default function MarketSection() {
                 </motion.div>
 
 
-                {/* RIGHT SIDE: News Section (Slide in from right) */}
+                
                 <motion.div
                     className="bg-white shadow rounded-lg md:p-4 p-3 flex flex-col justify-between border border-gray-100"
                     initial="hidden"
@@ -175,7 +175,7 @@ export default function MarketSection() {
                             <Newspaper className="text-orange-500" size={18} />
                             <h3 className="text-[16px] font-bold text-gray-800">Latest News</h3>
                         </div>
-                        {/* Staggered animation wrapper for news items */}
+                        
                         <motion.div
                             initial="hidden"
                             animate="visible"

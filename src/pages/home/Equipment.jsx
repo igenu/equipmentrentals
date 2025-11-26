@@ -193,7 +193,7 @@ export default function EquipmentTrends() {
     <section className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="max-w-[1200px] mx-auto px-4">
 
-        {/* HEADER: Still animates on load for a fast start */}
+        
         <motion.div
           className="text-center mb-10"
           initial={{ y: -20, opacity: 0 }}
@@ -212,11 +212,11 @@ export default function EquipmentTrends() {
           </p>
         </motion.div>
 
-        {/* --- */}
+        
 
         <div className="grid lg:grid-cols-4 gap-8">
 
-          {/* LEFT SIDE: TAB NAVIGATION (Still animates on load) */}
+          
           <div className="lg:col-span-1">
             <motion.div
               className="bg-white rounded-xl p-4 shadow-xl border border-gray-100 sticky top-6"
@@ -224,7 +224,7 @@ export default function EquipmentTrends() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              {/* ... (Tab navigation content remains the same) ... */}
+              
               <div className="mb-4 p-3 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg text-white">
                 <h3 className="font-bold text-[14px] mb-1">Browse Categories</h3>
                 <p className="text-gray-300 text-xs">Select a category below</p>
@@ -274,9 +274,9 @@ export default function EquipmentTrends() {
             </motion.div>
           </div>
 
-          {/* --- */}
+          
 
-          {/* RIGHT SIDE: EQUIPMENT CARDS (Scroll-Triggered) */}
+          
           <div className="lg:col-span-3">
 
             <div className="bg-white rounded-xl p-4 mb-6 shadow-lg border border-gray-100">
@@ -301,7 +301,7 @@ export default function EquipmentTrends() {
               </div>
             </div>
 
-            {/* SCROLL TRIGGER: Items will now animate as they enter the viewport */}
+            
             <div className="grid md:grid-cols-3 gap-6">
               {activeData.map((item, index) => (
                 <motion.div
@@ -319,7 +319,7 @@ export default function EquipmentTrends() {
                   onMouseLeave={() => setHoveredCard(null)}
                   className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-orange-200 flex flex-col justify-between"
                 >
-                  {/* ... (Card content remains the same) ... */}
+                  
                   <div>
                     <div className="relative h-48 overflow-hidden bg-gray-100">
                       <img

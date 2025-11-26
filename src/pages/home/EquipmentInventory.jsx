@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight, Search, FileText } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion"; // <-- IMPORTED
+import { motion, AnimatePresence } from "framer-motion"; 
 import thumb from "../../assets/video-thumb.jpg";
 
 const tabs = ["Cranes", "Earthmoving", "Road", "Concreting", "Plant", "Miscellaneous"];
@@ -87,7 +87,7 @@ const equipmentData = {
   },
 };
 
-// Variants for scroll-in animation
+
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -101,13 +101,13 @@ const sectionVariants = {
   }
 };
 
-// Variants for individual elements (like buttons)
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
 };
 
-// Variants for tab content transition
+
 const contentVariants = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
@@ -146,7 +146,7 @@ export default function EquipmentInventory() {
 
       <motion.div
         className="flex flex-wrap justify-center gap-2 mb-8 max-w-4xl mx-auto"
-        variants={sectionVariants} // Reuse section variants for staggered tab buttons
+        variants={sectionVariants} 
       >
         {tabs.map((tab) => (
           <motion.button
@@ -167,12 +167,12 @@ export default function EquipmentInventory() {
       <motion.div
         className="max-w-[1200px] mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden"
         variants={itemVariants}
-        transition={{ duration: 0.6, delay: 0.2 }} // Delay for the main content block
+        transition={{ duration: 0.6, delay: 0.2 }} 
       >
-        {/* ANIMATEPRESENCE ensures the content fades out and the new content fades in */}
+        
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeTab} // Key changes on tab switch, triggering animation
+            key={activeTab} 
             variants={contentVariants}
             initial="initial"
             animate="animate"
@@ -180,7 +180,7 @@ export default function EquipmentInventory() {
             className="grid md:grid-cols-3 gap-0"
           >
 
-            {/* Column 1: Text Content */}
+            
             <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">
               <div className="inline-block px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-4 self-start">
                 Featured Category
@@ -205,7 +205,7 @@ export default function EquipmentInventory() {
             </div>
 
 
-            {/* Column 2: Image */}
+            
             <div className="relative overflow-hidden">
               <img
                 src={currentData.image}
@@ -216,7 +216,7 @@ export default function EquipmentInventory() {
             </div>
 
 
-            {/* Column 3: List */}
+            
             <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-10 text-white">
               <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
                 <span className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center text-[12px]">
